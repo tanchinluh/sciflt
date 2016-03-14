@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:lang="en" xml:id="fls_structure"><info><pubdate>@DATE@</pubdate></info><refnamediv><refname>fls_structure</refname><refpurpose>Scilab Fuzzy Logic System
+  Structure</refpurpose></refnamediv>
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   <refsection><title>Description</title>
+    
+      <para>Any <literal>fls</literal> (fuzzy logic system) used with this toolbox was
+    structured in a <literal>t-list</literal>, and this structure is over-loaded to
+    help user manipulation.</para>
+
+    
+      <para>
+      <inlinemediaobject>
+        <imageobject>
+          <imagedata fileref="fls_structure.gif"/>
+        </imageobject>
+      </inlinemediaobject>
+    </para>
+  
+   </refsection>
+
+  
+   <refsection><title>Structure</title>
+    
+      <para>The general part have the following structure:</para>
+
+    
+      <itemizedlist>
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.name</literal> : string, the internal tag-name.</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.comment</literal> : string, user's comment.</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.type</literal> : string, <literal>'ts'</literal> for
+        Takagi-Sugeno, <literal>'m'</literal> for Mamdani.</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.SNorm</literal> : string, the S-Norm class type.
+        <literal>'dubois'</literal> for Dubois-Prade, <literal>'yager'</literal> for
+        Yager, <literal>'dsum'</literal> for drastic sum, <literal>'esum'</literal> for
+        Einstein sum, <literal>'asum'</literal> for algebraic sum,
+        <literal>'max'</literal> for maximum.</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.SNormPar</literal> : scalar, S-Norm class parameter. This
+        parameter is required if S-Norm class is <literal>'dubois'</literal> or
+        <literal>'yager'</literal>.</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.TNorm</literal> : string, the T-Norm class
+        type.<literal>'dubois'</literal> for Dubois-Prade, <literal>'yager'</literal> for
+        Yager, <literal>'dprod'</literal> for drastic product, <literal>'eprod'</literal>
+        for Einstein product, <literal>'aprod'</literal> for algebraic product,
+        <literal>'min'</literal> for minimum.</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.TNormPar</literal> : scalar, T-Norm class parameter.This
+        parameter is required if T-Norm class is <literal>'dubois'</literal> or
+        <literal>'yager'</literal>.</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.Comp</literal> : string, Complement class
+        type.<literal>'one'</literal> for classical complement, <literal>'yager'</literal>
+        for yager, <literal>'sugeno'</literal> for sugeno.</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.CompPar</literal> : scalar, Complement class parameter.This
+        parameter is required if Complement class is <literal>'yager'</literal> or
+        <literal>'sugeno'</literal>.</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.ImpMethod</literal> : string, implication
+        method.<literal>'min'</literal> for minimum or <literal>'prod'</literal> for
+        product.</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.AggMethod</literal> : string, aggregation
+        method.<literal>'max'</literal> for maximum, <literal>'sum'</literal> for sum,
+        <literal>'probor'</literal> for probabilistic or.</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.defuzzMethod</literal> : string, defuzzification
+        method.<literal>'centroide'</literal> for centroide, <literal>'bisector'</literal>
+        for bisector, <literal>'mom'</literal> for mean of maximum,
+        <literal>'som'</literal> for shortest of maximum, <literal>'lom'</literal> for
+        largest of maximum, <literal>'wtaver'</literal> for weigthed average,
+        <literal>'wtsum'</literal> for weigthed sum.</para>
+      
+         </listitem>
+    
+      </itemizedlist>
+
+    
+      <para/>
+
+    
+      <para>The inputs have the following structure:</para>
+
+    
+      <itemizedlist>
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.input(j).name</literal> : string, the tag-name of the
+        j-input variable</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.input(j).range</literal> : real row vector in the form
+        <literal>[minDom, maxDom]</literal>, where <literal>minDom</literal> means the
+        minimum value of the j-input, and, <literal>maxDom</literal> means the
+        maximum value of the j-input.</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.input(j).mf(i).name</literal> : string, the tag-name of the
+        i-member function of the j-input variable.</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.input(j).mf(i).type</literal> : string, the type of the
+        i-member function of the j-input variable.</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.input(j).mf(i).par</literal> : real row vector, the
+        parameters of the i-member function of the j-input variable.</para>
+      
+         </listitem>
+    
+      </itemizedlist>
+
+    
+      <para/>
+
+    
+      <para>The outputs have the following structure:</para>
+
+    
+      <itemizedlist>
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.output(j).name</literal> : string, the tag-name of the
+        j-output variable</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.output(j).range</literal> : real row vector in the form
+        <literal>[minDom, maxDom]</literal>, where <literal>minDom</literal> means the
+        minimum value of the j-output, and, <literal>maxDom</literal> means the
+        maximum value of the j-output.</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.output(j).mf(i).name</literal> : string, the tag-name of
+        the i-member function of the j-output variable.</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.output(j).mf(i).type</literal> : string, the type of the
+        i-member function of the j-output variable.</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.output(j).mf(i).par</literal> : real row vector, the
+        parameters of the i-member function of the j-output variable.</para>
+      
+         </listitem>
+    
+      </itemizedlist>
+
+    
+      <para/>
+
+    
+      <para>The rule have the following structure:</para>
+
+    
+      <itemizedlist>
+      
+         <listitem>
+        
+            <para>
+               <literal>fls.rule</literal> : matrix of real with dimension
+        <literal>[nrule, ninputs+noutputs+2]</literal>, where: <literal>nrules</literal>
+        mean the number of rules, <literal>ninputs</literal> the number of inputs,
+        <literal>noutputs</literal> the number of outputs.</para>
+      
+         </listitem>
+    
+      </itemizedlist>
+
+    
+      <para/>
+
+    
+      <para>The i value of the j element in columns <literal>[1:ninputs]</literal>
+    indicate the i-member function of the j input, if the value is negative,
+    then, the complement is applicated, if the value is 0 then, the rule no
+    take in count the input.</para>
+
+    
+      <para>The i value of the j element in columns [ninputs+1:ninputs+noutpus]
+    indicate the i-member function of the j output, if the value is 0 then,
+    the rule no take in count the output.</para>
+
+    
+      <para>The value of the <literal>[ninputs+noutputs+1]</literal> indicate how the
+    rule was compound: 0 for T-Norm (OR) or 1 for S-Norm (AND).</para>
+
+    
+      <para>The value of the <literal>[ninputs+noutputs+2]</literal> indicate the weight
+    of the rule.</para>
+  
+   </refsection>
+
+  
+   <refsection><title>Examples</title><programlisting role="example"><![CDATA[// A new fls structure
+fls=newfls();
+fls.name="example";
+fls.comment="This is an example";
+fls.TNorm="min";
+fls.SNorm="max";
+fls.Comp="one";
+fls.defuzzMethod="wtaver";
+fls=addvar(fls,"input","speed",[0 100]);
+fls=addmf(fls,"input",1,"low","trimf",[-50 0 50]);
+fls=addmf(fls,"input",1,"med","trimf",[0 50 100]);
+fls=addmf(fls,"input",1,"high","trimf",[50 100 150]);
+fls=addvar(fls,"output","actuation",[0 1]);
+fls=addmf(fls,"output",1,"run","constant",0);
+fls=addmf(fls,"output",1,"start_to_stop","constant",0.5);
+fls=addmf(fls,"output",1,"stop","constant",1);
+]]></programlisting></refsection>
+
+  
+   <refsection><title>See Also</title><simplelist type="inline">
+    
+      <member>
+      
+         <link linkend="snorm">snorm</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="tnorm">tnorm</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="complement">complement</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="defuzzm">defuzzm</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="newfls">newfls</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="evalfls">evalfls</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="member_functions">member_functions</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="checkrule">checkrule</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="m2ts">m2ts</link>
+    
+      </member>
+  
+   </simplelist></refsection>
+
+  
+   <refsection><title>Authors</title><para>Jaime Urzua Grez</para><para>Holger Nahrstaedt</para></refsection>
+
+</refentry>

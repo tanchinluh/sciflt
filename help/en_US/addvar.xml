@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from addvar.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="addvar" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>addvar</refname>
+    <refpurpose>Add a new variable to a fls and return it</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   fls=addvar( fls_input , var_type , var_name , var_range )
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>fls_input:</term>
+      <listitem><para> fuzzy logic system (as input).</para></listitem></varlistentry>
+   <varlistentry><term>fls:</term>
+      <listitem><para>fuzzy logic system (as output).</para></listitem></varlistentry>
+   <varlistentry><term>var_type:</term>
+      <listitem><para>string. <literal>"input"</literal> for input variable,  <literal>"output"</literal> for output variable.</para></listitem></varlistentry>
+   <varlistentry><term>var_name:</term>
+      <listitem><para> string. Variable tag-name.</para></listitem></varlistentry>
+   <varlistentry><term>var_range:</term>
+      <listitem><para> row vector with two elements <literal>[minDom MaxDom]</literal>.          Variable range, <literal>minDom</literal> for minimum value and           <literal>maxDom</literal> for maximum value of the variable.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>addvar </literal> add a new variable to fuzzy logic system
+<literal>fls_input</literal> and return it with this change as <literal>fls</literal>.
+This command add the variable named <literal>var_name</literal> with range
+<literal>[minDom, maxDom]</literal> in the input or output (depends of
+<literal>var_type</literal> parameter). If the fuzzy logic system have rules,
+add a new column in rules reflecting the new variable.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+fls=newfls("m");
+fls=addvar(fls,"input","speed",[0 100]);
+fls=addvar(fls,"input","wind",[0 100]);
+fls=addvar(fls,"output","actuation",[0 10]);
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="fls_structure">fls_structure</link></member>
+   <member><link linkend="delvar">delvar</link></member>
+   <member><link linkend="addmf">addmf</link></member>
+   <member><link linkend="delmf">delmf</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

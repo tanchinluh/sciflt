@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from delmf.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="delmf" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>delmf</refname>
+    <refpurpose>Delete member function to a fls and return it with this change.</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   fls=delmf( fls_input , input_output , var_index , mf_index )
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>fls_input:</term>
+      <listitem><para> fuzzy logic system (as input).</para></listitem></varlistentry>
+   <varlistentry><term>fls:</term>
+      <listitem><para> fuzzy logic system (as output).</para></listitem></varlistentry>
+   <varlistentry><term>input_output:</term>
+      <listitem><para> string. "input" for input variable, "output" for output variable.</para></listitem></varlistentry>
+   <varlistentry><term>var_index:</term>
+      <listitem><para> integer. Variable number.</para></listitem></varlistentry>
+   <varlistentry><term>mf_index:</term>
+      <listitem><para>integer. Member function number.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>delmf </literal> delete a member function from fuzzy logic system
+<literal>fls_input</literal> and return it with this change as <literal>fls</literal>.
+This command only delete the <literal>mf_index</literal> member function of the
+<literal>var_index</literal> variable if the member function exist in the input
+or output (depends of <literal>input_output</literal> parameter). If the fuzzy
+logic system have rules, then fix the rules reflecting the change.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+
+fls=newfls("m");
+fls=addvar(fls,"input","speed",[0 100]);
+fls=addmf(fls,"input",1,"low","trimf",[-50 0 50]);
+fls=addmf(fls,"input",1,"med","trimf",[0 50 100]);
+fls=addmf(fls,"input",1,"high","trimf",[50 100 150]);
+fls=delmf(fls,"input",1,2); // Delete the member function named "med" in the input variable number 1 named "speed"
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="addvar">addvar</link></member>
+   <member><link linkend="delvar">delvar</link></member>
+   <member><link linkend="addmf">addmf</link></member>
+   <member><link linkend="fls_structure">fls_structure</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

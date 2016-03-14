@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from fcmeans.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="fcmeans" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>fcmeans</refname>
+    <refpurpose>Data clustering using fuzzy c-means.</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   [centers,U,ofun,ofunk,em]=fcmeans(Xin,c,m [,maxiter [,epsilon [,verbose]]])
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>Xin:</term>
+      <listitem><para>matrix of reals.The pairs of inputs points.</para></listitem></varlistentry>
+   <varlistentry><term>c:</term>
+      <listitem><para>integer, number of clusters.</para></listitem></varlistentry>
+   <varlistentry><term>m:</term>
+      <listitem><para>scalar, fizzifier constant.</para></listitem></varlistentry>
+   <varlistentry><term>maxiter:</term>
+      <listitem><para>integer, maximum number of iterations. The defaul value is 100</para></listitem></varlistentry>
+   <varlistentry><term>epsilon:</term>
+      <listitem><para>scalar, minimum change value between two consecutive iterations. The default value is 0.001</para></listitem></varlistentry>
+   <varlistentry><term>verbose:</term>
+      <listitem><para>boolean, display information.The default value is %f.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>fcmeans </literal> find the <literal>c</literal> number of clusters in the
+data set <literal>Xin</literal> using fuzzy c-means algorithm. The centers for
+each cluster are returned in <literal>centers</literal>. <literal>U</literal> contains
+the grade of membership of each <literal>Xin</literal> point in each cluster.
+<literal>ofun</literal> is the last objetive function. <literal>ofunk</literal> is the
+objetive function in each iteration. <literal>em</literal> is the exit mode, if
+<literal>em</literal> is <literal>%t</literal> then the maximum number of iteration
+<literal>maxiter</literal> was reached, if <literal>em</literal> is <literal>%f</literal>
+then the minimum change between iteration <literal>epsilon</literal> was
+reached.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Take 50 random pairs of points
+Xin=rand(100,2);
+// Find 7 clusters
+[centers,U,ofun,ofunk]=fcmeans(Xin,7,2);
+// Display information
+scf();clf();
+subplot(2,2,1);
+plot2d(Xin(:,1),Xin(:,2),-1,rect=[0 0 1 1]);
+xtitle("Input pair of points","x","y");
+subplot(2,2,3);
+plot2d(centers(:,1),centers(:,2),-2,rect=[0 0 1 1]);
+xtitle("Cluster centers","x","y");
+subplot(2,2,2);
+plot(ofunk);
+xtitle("Objetive function in each iteration","k","ofun");
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="subclust">subclust</link></member>
+   <member><link linkend="inwichclust">inwichclust</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:lang="en" xml:id="scicos_mf"><info><pubdate>@DATE@</pubdate></info><refnamediv><refname>scicos_mf</refname><refpurpose>Scicos Member Function
+  Block.</refpurpose></refnamediv>
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   <refsection><title>Description</title>
+    
+          <para>
+      <inlinemediaobject>
+        <imageobject>
+          <imagedata fileref="scicos_mf.gif"/>
+        </imageobject>
+      </inlinemediaobject>
+    </para>
+    
+
+    
+      <para>This block compute the followin member functions:</para>
+
+    
+      <itemizedlist>
+      
+         <listitem>
+        
+            <para>Triangular</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Trapezoidal</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Gaussian</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Extended Gaussian</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Generalized Bell</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Sigmoidal</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Product of two Sigmoidal</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Absolute difference of tho Sigmoidal</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>S-Shaped</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Z-Shaped</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Pi-Shaped</para>
+      
+         </listitem>
+    
+      </itemizedlist>
+
+    
+      <para/>
+
+    
+      <para>The user can select the member function type and set the parameters in
+    the usual set sequence.</para>
+  
+   </refsection>
+
+  
+   <refsection><title>See Also</title><simplelist type="inline">
+    
+      <member>
+      
+         <link linkend="member_functions">member_functions</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="scicos_complement">scicos_complement</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="scicos_snorm">scicos_snorm</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="scicos_tnorm">scicos_tnorm</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="scicos_fls">scicos_fls</link>
+    
+      </member>
+  
+   </simplelist></refsection>
+
+  
+   <refsection><title>Authors</title><para>Jaime Urzua Grez</para><para>Holger Nahrstaedt</para></refsection>
+
+</refentry>

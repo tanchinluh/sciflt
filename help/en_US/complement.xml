@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from complement.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="complement" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>complement</refname>
+    <refpurpose>Fuzzy Logic Complemen</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   y=complement( x , class [,class_par] )
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>x , y:</term>
+      <listitem><para>matrix of real.</para></listitem></varlistentry>
+   <varlistentry><term>class:</term>
+      <listitem><para>string, complement class. The values can be: "one" for classic complement, "sugeno" for sugeno's complement class or "yager" for yager's complement class.</para></listitem></varlistentry>
+   <varlistentry><term>class_par:</term>
+      <listitem><para>scalar, complement class parameter. "sugeno" and "yager" class need this parameter.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>complement </literal> compute complement <literal>class</literal> of
+<literal>x</literal> with parameters <literal>class_par</literal>.
+   </para>
+   <para>
+   </para>
+   <para>
+<literal>"yager"</literal> class need <literal>class_par&amp;gt;0</literal>.
+<literal>"sugeno" </literal>class need <literal>class_par&amp;gt;-1</literal>.
+   </para>
+   <para>
+<inlinemediaobject> <imageobject> <imagedata fileref="complement.gif" />
+</imageobject> </inlinemediaobject>
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x=linspace(0,1,100)';
+y1=complement(x,"one");
+y2=complement(x,"sugeno",0.5);
+y3=complement(x,"yager",2);
+scf();clf();
+plot2d(x,[y1 y2 y3],leg="y1@y2@y3");
+xtitle("Complement Class Example","x","mu(x)");
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="scicos_complement">scicos_complement</link></member>
+   <member><link linkend="snorm">snorm</link></member>
+   <member><link linkend="tnorm">tnorm</link></member>
+   <member><link linkend="fls_structure">fls_structure</link></member>
+   <member><link linkend="newfls">newfls</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

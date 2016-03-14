@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from trapmf.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="trapmf" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>trapmf</refname>
+    <refpurpose>Trapezoidal member function.</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   y=trapmf(x,par)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>x:</term>
+      <listitem><para>matrix of real.</para></listitem></varlistentry>
+   <varlistentry><term>par=[a,b,c,d]:</term>
+      <listitem><para>4 element row vector of parameters.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>trapmf </literal> compute the trapezoidal member function of
+<literal>x</literal> with parameters <literal>[a,b,c,d]</literal>. This member
+function need <literal>a&amp;lt;b&amp;lt;=c&amp;lt;d</literal>.
+   </para>
+   <para>
+<inlinemediaobject> <imageobject> <imagedata fileref="trapmf.gif" />
+</imageobject> </inlinemediaobject>
+   </para>
+   <para>
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x=linspace(0,1,100)';
+y1=trapmf(x,[0 0.2 0.4 0.6]);
+y2=trapmf(x,[0.2 0.5 0.6 0.9]);
+y3=trapmf(x,[0.5 0.6 0.8 0.9 ]);
+scf();clf(); plot2d(x,[y1 y2 y3],leg="y1@y2@y3");
+xtitle("Trapezoidal Member Function Example","x","mu(x)");
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="member_functions">member_functions</link></member>
+   <member><link linkend="mfeval">mfeval</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

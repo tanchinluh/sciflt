@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from inwichclust.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="inwichclust" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>inwichclust</refname>
+    <refpurpose>Find associated cluster</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   po=inwichclust(X,centers)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>X:</term>
+      <listitem><para>matrix of real. Data points.</para></listitem></varlistentry>
+   <varlistentry><term>centers:</term>
+      <listitem><para>matrix of real. Cluster centers.</para></listitem></varlistentry>
+   <varlistentry><term>po:</term>
+      <listitem><para>matrix of integers. Associated cluster of each point</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>inwichclust </literal> return the nearest cluster's center position
+of the pair of data <emphasis role="bold">X</emphasis>.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Generate 10 points centered in (1,1) (2,2) and (5,5)
+X=[1+rand(10,2);2+rand(10,2);5+rand(10,2)];
+centers=subclust(X);
+po=inwichclust(X,centers);
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="fcmeans">fcmeans</link></member>
+   <member><link linkend="subclust">subclust</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

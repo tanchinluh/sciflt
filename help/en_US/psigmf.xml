@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from psigmf.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="psigmf" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>psigmf</refname>
+    <refpurpose>Product of Two Sigmoidal member function</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   y=psigmf(x,par)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>x:</term>
+      <listitem><para>matrix of real.</para></listitem></varlistentry>
+   <varlistentry><term>par=[a,b,c,d]:</term>
+      <listitem><para>4 element row vector of parameters.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>psigmf </literal> compute the product of two sigmoidal member
+function of <literal>x</literal> with parameters <literal>[a,b,c,d]</literal>.
+   </para>
+   <para>
+<inlinemediaobject> <imageobject> <imagedata fileref="psigmf.gif" />
+</imageobject> </inlinemediaobject>
+   </para>
+   <para>
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x=linspace(0,1,100)';
+y1=psigmf(x,[15 0.1 15 0.3]);
+y2=psigmf(x,[-15 0.5 -15 0.7]);
+y3=psigmf(x,[15 0.5 -15 0.7]);
+scf();clf();
+plot2d(x,[y1 y2 y3],leg="y1@y2@y3");
+xtitle("Trapezoidal Member Function Example","x","mu(x)");
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="member_functions">member_functions</link></member>
+   <member><link linkend="mfeval">mfeval</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

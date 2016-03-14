@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from editfls.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="editfls" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>editfls</refname>
+    <refpurpose>GUI fls editor.</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   y=evalfls(x,fls,[npev])
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>fls:</term>
+      <listitem><para>fls structure to evaluate</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+   </para>
+   <para>
+<literal>editfls </literal> is an embedded scilab fuzzy logic system editor
+written in TCL/TK.
+   </para>
+   <para>
+The main window have four zones:
+   </para>
+   <para>
+<itemizedlist>
+<listitem>
+<emphasis role="bold">Menu</emphasis>: At top level. This zone have the <emphasis role="bold">File</emphasis>,
+<emphasis role="bold">View</emphasis> and <emphasis role="bold">Help</emphasis> command.
+</listitem>
+<listitem>
+<emphasis role="bold">Center left window</emphasis> (main selection) : Show a tree of
+current editing structure. With one click the state change and show
+the associated information or possible parameters in the center right
+window.
+</listitem>
+<listitem>
+<emphasis role="bold">Center right window</emphasis> (change information): Display
+information and parameters. This is the zone of editing.
+</listitem>
+<listitem>
+<emphasis role="bold">Status bar</emphasis>: Show some important information about the
+editor status, also, warnings to the user.
+</listitem>
+</itemizedlist>
+   </para>
+   <para>
+If <literal>editfls</literal> is called without any argument, then only open
+the editor.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+fls=newfls("m","Example");
+editfls fls
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="fls_structure">fls_structure</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

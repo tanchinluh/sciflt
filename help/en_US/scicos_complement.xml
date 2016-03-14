@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:lang="en" xml:id="scicos_complement"><info><pubdate>@DATE@</pubdate></info><refnamediv><refname>scicos_complement</refname><refpurpose>Scicos Complement
+  Block.</refpurpose></refnamediv>
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   <refsection><title>Description</title>
+    
+      
+
+    <para>
+      <inlinemediaobject>
+        <imageobject>
+          <imagedata fileref="scicos_complement.gif"/>
+        </imageobject>
+      </inlinemediaobject>
+    </para>
+    
+      <para>This block compute the following fuzzy complement class:</para>
+
+    
+      <itemizedlist>
+      
+         <listitem>
+        
+            <para>One</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Yager</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Sugeno</para>
+      
+         </listitem>
+    
+      </itemizedlist>
+
+    
+      <para/>
+
+    
+      <para>The user can select the complement class and set the parameters in the
+    usual set sequence.</para>
+  
+   </refsection>
+
+  
+   <refsection><title>See Also</title><simplelist type="inline">
+    
+      <member>
+      
+         <link linkend="complement">complement</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="scicos_mf">scicos_mf</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="scicos_snorm">scicos_snorm</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="scicos_tnorm">scicos_tnorm</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="scicos_fls">scicos_fls</link>
+    
+      </member>
+  
+   </simplelist></refsection>
+
+     <refsection><title>Authors</title><para>Jaime Urzua Grez</para><para>Holger Nahrstaedt</para></refsection>
+     
+</refentry>

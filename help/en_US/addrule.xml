@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from addrule.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="addrule" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>addrule</refname>
+    <refpurpose>Add a new member function to a fls structure</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   fls=addrule(fls_input,rule_matrix)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>fls_input:</term>
+      <listitem><para> fuzzy logic system (as input).</para></listitem></varlistentry>
+   <varlistentry><term>fls:</term>
+      <listitem><para>fuzzy logic system (as output).</para></listitem></varlistentry>
+   <varlistentry><term>rule_matrix:</term>
+      <listitem><para> each row of the rule matrix represents one rule and has the form [in1_mf ... inM_mf out1_mf ... outN_mf  connect weight]</para></listitem></varlistentry>
+   <varlistentry><term>where:</term>
+      <listitem><para> </para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+To express:
+   </para>
+   <para>
+"not" -- prepend a minus sign to the membership function index
+   </para>
+   <para>
+"somewhat" -- append ".05" to the membership function index
+   </para>
+   <para>
+"very" -- append ".20" to the membership function index
+   </para>
+   <para>
+"extremely" -- append ".30" to the membership function index
+   </para>
+   <para>
+"very very" -- append ".40" to the membership function index
+   </para>
+   <para>
+To omit an input or output, use 0 for the membership function index.
+The consequent connective is always "and".
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+
+//   If (input_1 is mf_2) or (input_3 is not mf_1) or (input_4 is very mf_1),
+//    then (output_1 is mf_2) and (output_2 is mf_1^0.3).
+//    fls=addrule(fls,[2 0 -1 4.2 2 1.03 0 1]);
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="addvar">addvar</link></member>
+   <member><link linkend="delvar">delvar</link></member>
+   <member><link linkend="delmf">delmf</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

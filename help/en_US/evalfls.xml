@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from evalfls.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="evalfls" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>evalfls</refname>
+    <refpurpose>Evaluate fuzzy logic system</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   y=evalfls(x,fls,[npev])
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>x:</term>
+      <listitem><para>matrix of real. Input points.</para></listitem></varlistentry>
+   <varlistentry><term>fls:</term>
+      <listitem><para>fls structure to evaluate</para></listitem></varlistentry>
+   <varlistentry><term>npev:</term>
+      <listitem><para>scalar or vector, number of points to evaluate during defuzzification algorithm (mamdani)</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>evalfls </literal>evaluate the fuzzy logic system <literal>fls</literal>
+in points <literal>x</literal> and return values in <literal>y</literal>. The
+<literal>x</literal> parameters have dimension <literal>[npairs_of_inputs,
+number_of_inputs]</literal>, the output <literal>y</literal> have dimension
+<literal>[npairs_of_inputs, number_of_outputs]</literal>.
+   </para>
+   <para>
+   </para>
+   <para>
+The <literal>npev</literal> parameter is optional in Mamdani case, the user
+can set the number of partitions of the output variable domain to evaluate
+the member functions for each output. This parameter can be a scalar (all
+outputs are evaluated with the same number of partitions) or vector (each
+element set the number of partitions for each output).The default value
+for all outputs is 1001 points.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// GET A FLS
+fls=loadfls(flt_path()+"demos/fan1.fls");
+// EVALUATE
+y1=evalfls([50 50],fls)
+y2=evalfls([50 20;50 50],fls,100)
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="fls_structure">fls_structure</link></member>
+   <member><link linkend="newfls">newfls</link></member>
+   <member><link linkend="scicos_fls">scicos_fls</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

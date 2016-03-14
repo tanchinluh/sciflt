@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from plotsurf.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="plotsurf" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>plotsurf</refname>
+    <refpurpose>Plot fls output surface</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   plotsurf( fls [, ivar , ovar , [vivar [,npart [,mod]]]])
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>fls:</term>
+      <listitem><para>fls structure.</para></listitem></varlistentry>
+   <varlistentry><term>ivar:</term>
+      <listitem><para>vector, input variables.</para></listitem></varlistentry>
+   <varlistentry><term>ovar:</term>
+      <listitem><para>scalar, output variable.</para></listitem></varlistentry>
+   <varlistentry><term>vivar:</term>
+      <listitem><para>vector, value if input variable</para></listitem></varlistentry>
+   <varlistentry><term>npart:</term>
+      <listitem><para>vector, number of partitions domain for each input variable.</para></listitem></varlistentry>
+   <varlistentry><term>mod:</term>
+      <listitem><para>scalar, display mode.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+   </para>
+   <para>
+<literal>plotsurf </literal> plot the output fls surface. In the x axis was
+plotted the <literal>ivar(1)</literal> input variable, in the y axes the
+<literal>ivar(2)</literal> input variable and in the z axes the
+<literal>ovar</literal> output variable.
+   </para>
+   <para>
+The rest of input variables take the
+value defined in <literal>vivar</literal>, <literal>vivar(ivar(1))</literal> and
+<literal>vivar(ivar(2))</literal> are generated internally, so this values don't
+care.
+   </para>
+   <para>
+   </para>
+   <para>
+The user can set the number of partitions for each input variable with
+<literal>npart</literal> parameter. The default value for inputs is 21
+partitions.
+   </para>
+   <para>
+   </para>
+   <para>
+The <literal>mod</literal> parameter mean: 1 for grayscale, 2 for
+jetcolormap, 3 for hotcolormap and 4 for internal color map.
+   </para>
+   <para>
+   </para>
+   <para>
+If <literal>plotsurf</literal> is called with only <literal>fls</literal>
+parameter, the a GUI to select inputs and outputs are launched.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// READ A FLS
+fls=loadfls(flt_path()+"demos/fan1.fls");
+scf();clf();
+plotsurf(fls,[1 2],1);
+
+scf();clf();
+plotsurf(fls,1,1,[0 50]);
+
+scf();clf();
+plotsurf(fls)
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="plotvar">plotvar</link></member>
+   <member><link linkend="printrule">printrule</link></member>
+   <member><link linkend="newfls">newfls</link></member>
+   <member><link linkend="fls_structure">fls_structure</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

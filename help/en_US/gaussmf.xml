@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from gaussmf.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="gaussmf" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>gaussmf</refname>
+    <refpurpose>Gaussian member function</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   y=gaussmf(x,par)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>x:</term>
+      <listitem><para>matrix of real.</para></listitem></varlistentry>
+   <varlistentry><term>par=[sig,c]:</term>
+      <listitem><para>2 element row vector of parameters.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>gaussmf </literal> compute the gaussian member function of
+<literal>x</literal> with parameters <literal>[sig,c]</literal>. This member function
+need sig and c.
+   </para>
+   <para>
+gaussmf(x,[sig,c])=exp(-(x-c)^2/(2*sig^2))
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x=linspace(0,1,100)';
+y1=gaussmf(x,[2 5]);
+y2=gaussmf(x,[3 6]);
+y3=gaussmf(x,[5 8]);
+scf();clf();
+plot2d(x,[y1 y2 y3],leg="y1@y2@y3");
+xtitle("Gaussian Member Function Example","x","mu(x)");
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="member_functions">member_functions</link></member>
+   <member><link linkend="mfeval">mfeval</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

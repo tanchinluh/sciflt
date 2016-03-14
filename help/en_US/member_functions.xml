@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:lang="en" xml:id="member_functions"><info><pubdate>@DATE@</pubdate></info><refnamediv><refname>member_functions</refname><refpurpose>Member functions implemented in
+  sciFLT toolbox.</refpurpose></refnamediv>
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   <refsection><title>Description</title>
+    
+      <para>
+         <literal>sciFLT</literal> toolbox implements the followings member functions
+    :</para>
+
+    
+      <itemizedlist>
+      
+         <listitem>
+        
+            <para>Triangular</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Trapezoidal</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Gaussian</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Extended Gaussian</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Generalized Bell</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Sigmoidal</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Product of two Sigmoidal</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Absolute difference of tho Sigmoidal</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>S-Shaped</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Z-Shaped</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Pi-Shaped</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Constant (as output for Takagi-Sugeno)</para>
+      
+         </listitem>
+
+      
+         <listitem>
+        
+            <para>Linear (as output for Takagi-Sugeno)</para>
+      
+         </listitem>
+    
+      </itemizedlist>
+  
+   </refsection>
+
+  
+   <refsection><title>See Also</title><simplelist type="inline">
+    
+      <member>
+      
+         <link linkend="trimf">trimf</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="trapmf">trapmf</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="gaussmf">gaussmf</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="gauss2mf">gauss2mf</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="gbellmf">gbellmf</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="sigmf">sigmf</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="psigmf">psigmf</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="dsigmf">dsigmf</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="smf">smf</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="zmf">zmf</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="pimf">pimf</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="constant">constant</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="linear">linear</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="mfeval">mfeval</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="scicos_mf">scicos_mf</link>
+    
+      </member>
+  
+   </simplelist></refsection>
+
+  
+   <refsection><title>Authors</title><para>Jaime Urzua Grez</para><para>Holger Nahrstaedt</para></refsection>
+
+</refentry>

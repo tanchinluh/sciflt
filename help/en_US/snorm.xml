@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from snorm.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="snorm" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>snorm</refname>
+    <refpurpose>Fuzzy Logic S-Norm (OR)</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   y=snorm( x , class [,class_par] )
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>x:</term>
+      <listitem><para> matrix of real with size [m,n].</para></listitem></varlistentry>
+   <varlistentry><term>y:</term>
+      <listitem><para> matrix of real with size [m,1].</para></listitem></varlistentry>
+   <varlistentry><term>class:</term>
+      <listitem><para> string, s-norm class. The values can be: "dubois" for Dubois-Prade S-Norm, "yager" for Yager S-Norm, "dsum" for drastic sum S-Norm, "esum" for Einstein sum S-Norm, "asum" for algebraic sum S-Norm, "max" for maximum S-Norm.</para></listitem></varlistentry>
+   <varlistentry><term>class_par:</term>
+      <listitem><para> scalar, S-Norm class parameter. "dubois" and "yager" class need this parameter.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>snom </literal> compute S-Norm <literal>class</literal> of <literal>x</literal>
+with parameter <literal>class_par</literal>. The calculation was made taking the
+j row of <literal>x</literal> as input and put the resulting value in the j row
+of <literal>y</literal> (row oriented calculation).
+   </para>
+   <para>
+<literal>"dubois"</literal> class need <literal>0&amp;lt;=class_par&amp;lt;=1</literal>.
+<literal>"yager" </literal>class need <literal>class_par&amp;gt;0</literal>.
+   </para>
+   <para>
+<inlinemediaobject> <imageobject> <imagedata fileref="snorm.gif" />
+</imageobject> </inlinemediaobject>
+   </para>
+   <para>
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x=rand(5,2);
+y1=snorm(x,"dubois",0.5);
+y2=snorm(x,"yager",2);
+y3=snorm(x,"dsum");
+y4=snorm(x,"asum");
+y5=snorm(x,"max");
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="fls_structure">fls_structure</link></member>
+   <member><link linkend="tnorm">tnorm</link></member>
+   <member><link linkend="newfls">newfls</link></member>
+   <member><link linkend="scicos_snorm">scicos_snorm</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

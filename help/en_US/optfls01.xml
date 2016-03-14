@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from optfls01.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="optfls01" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>optfls01</refname>
+    <refpurpose>Create an optimized FLS system</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   [THETA,PSI,Ck,fls]=optfls01(X,Y,mj [,epsilon, [maxiter, [verbose]]])
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>X:</term>
+      <listitem><para>matrix of real with size [m,n].</para></listitem></varlistentry>
+   <varlistentry><term>Y:</term>
+      <listitem><para>matrix of real with size [m,1].</para></listitem></varlistentry>
+   <varlistentry><term>mj:</term>
+      <listitem><para>Number of partitions for each input components.</para></listitem></varlistentry>
+   <varlistentry><term>epsilon:</term>
+      <listitem><para>Minimum objetive function change</para></listitem></varlistentry>
+   <varlistentry><term>maxiter:</term>
+      <listitem><para>Maximum of iterations.</para></listitem></varlistentry>
+   <varlistentry><term>verbose:</term>
+      <listitem><para>Show information on screen (boolean).</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+FLS Optimization
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x = (0:0.1:10)';
+y = sin(2*x)./exp(x/5);
+[THETA,PSI,Ck,fls]=optfls01(x,y,5,%eps,20);
+scf();clf();
+plot(x,y);
+plot(x,evalfls(x,fls),'g');
+legend('Training Data','optfls01 Output');
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="fls_structure">fls_structure</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

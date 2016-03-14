@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from savefls.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="savefls" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>savefls</refname>
+    <refpurpose>Save fls structure in a file</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   savefls(fls,fls_filename)
+   savefls(fls,fls_filename,int_rules)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>fls:</term>
+      <listitem><para>fls structure.</para></listitem></varlistentry>
+   <varlistentry><term>fls_filename:</term>
+      <listitem><para>string, the file name where to save</para></listitem></varlistentry>
+   <varlistentry><term>int_rules:</term>
+      <listitem><para> boolean, %t - rules are written as integer (default), %f - rules are written as double</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>savefls </literal> save the fuzzy logic system <literal>fls</literal> in
+the file <literal>fls_filename</literal>. The extension <literal>.fls</literal> is
+only added to filename if it is not already included in the name.
+   </para>
+   <para>
+As the editor can only handle integer based rules, integer values can be forced with int_rules=%t
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Create a new structure
+fls1=newfls('ts');
+fls1.comment="This is an example"
+
+// Save the structure in TMPDIR/example1.fls
+savefls(fls1,TMPDIR+"/example1");
+
+// Restore the value
+fls2=loadfls(TMPDIR+"/example1")
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="loadfls">loadfls</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

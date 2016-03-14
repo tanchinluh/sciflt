@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from plotvar.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="plotvar" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>plotvar</refname>
+    <refpurpose>Plot a fls input(s) or output(s) variable(s)</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   plotvar( fls, inpout, var_number [,y_lower_limit,y_upper_limit [,npt]] )
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>fls:</term>
+      <listitem><para>fls structure.</para></listitem></varlistentry>
+   <varlistentry><term>inpouts:</term>
+      <listitem><para>string. "input" for input variable or "output" for output variable.</para></listitem></varlistentry>
+   <varlistentry><term>var_number:</term>
+      <listitem><para>vector. The input/output variable to plot.</para></listitem></varlistentry>
+   <varlistentry><term>y_lower_limit:</term>
+      <listitem><para> a real scalar (default value = -0.1)</para></listitem></varlistentry>
+   <varlistentry><term>y_lower_limit:</term>
+      <listitem><para> a real scalar (default value = 1.1)</para></listitem></varlistentry>
+   <varlistentry><term>npt:</term>
+      <listitem><para>scalar. Number of domain partitions.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>plotvar </literal> plot the member function of input or output
+variable from the <literal>fls</literal> structure. The parameter
+<literal>npt</literal> means the number or partitions of the variable domain
+(the default value is 101 partitions);
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// READ A FLS
+fls=loadfls(flt_path()+"demos/fan1.fls");
+// Plot inputs variables with 1001 partitions
+scf();clf();
+plotvar(fls,"input",[1 2],-0.1,1.1,1001);
+
+// Plot output variable with default values
+scf();clf();
+plotvar(fls,"output",1);
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="plotsurf">plotsurf</link></member>
+   <member><link linkend="printrule">printrule</link></member>
+   <member><link linkend="newfls">newfls</link></member>
+   <member><link linkend="fls_structure">fls_structure</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from gauss2mf.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="gauss2mf" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>gauss2mf</refname>
+    <refpurpose>Extended Gaussian member function</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   y=gauss2mf(x,par)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>x:</term>
+      <listitem><para>matrix of real.</para></listitem></varlistentry>
+   <varlistentry><term>par=[sig1,c1,sig2,c2]:</term>
+      <listitem><para>4 element row vector of parameters.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>gauss2mf </literal> compute the extended gaussian member function of
+<literal>x</literal> with parameters <literal>[sig1,c1,sig2,c2]</literal>. This member
+function need <literal>sig1, c1, sig2,c2</literal>.
+   </para>
+   <para>
+f(x,sig,c)=exp(-(x-c)^2/(2*sig^2))
+   </para>
+   <para>
+gauss2mf is the compination of both curves.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x=linspace(0,1,100)';
+y1 = gauss2mf(x, [2 4 1 8]);
+y2 = gauss2mf(x, [2 5 1 7]);
+y3 = gauss2mf(x, [2 6 1 6]);
+y4 = gauss2mf(x, [2 7 1 5]);
+y5 = gauss2mf(x, [2 8 1 4]);
+scf();clf();
+plot2d(x, [y1 y2 y3 y4 y5]);
+xtitle("Extended Gaussian Member Function Example","x","mu(x)");
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="member_functions">member_functions</link></member>
+   <member><link linkend="mfeval">mfeval</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

@@ -1,0 +1,110 @@
+CHANGELOG:
+----------
+2014-10-20  Holger Nahrstaedt
+	* 0.4.7
+	* 1473 fixed (thanks to  Chin Luh Tan)
+2014-03-21    Holger Nahrstaedt
+	* 0.4.6
+	* gbellmf can have negative c (thanks to  Chin Luh Tan)
+	* xcos dialgos improved
+	* fls files can  be loaded within xcos
+
+2014-02-03   Holger Nahrstaedt
+        * Launch Revision 0.4.5
+        * savefls bugs corrected (thanks to  Chin Luh Tan)
+
+2013-08-22    Holger Nahrstaedt
+        * Launch Revision 0.4.4
+        * xcos palette works under windows
+        * toolbox loads under windows
+
+2013-08-19    Holger Nahrstaedt
+        * Launch Revision 0.4.3
+        * improved build process
+        * works with scilab 5.4.1
+        * addrule added
+        * fls editor sciFLTEditor added
+
+
+2011-12-14    Holger Nahrstaedt
+	* Launch Revision 0.4.2
+	* replace wsum by wtsum and waver by wtaver
+	* help files are generated from the sci files and improved
+        * definition of all mf function is defined as in matlab
+        * a lot of bug fixes in evalfls and in other functions
+	* xcos support improved
+        * hedge support
+        * more demos
+
+2011-11-23    Holger Nahrstaedt
+	* Launch Revision 0.4.1
+	* improved build process
+
+2011-11-15   Holger Nahrstaedt
+	* Launch Revision 0.4
+	* The whole Toolbox is working under scilab 5.3.3
+
+
+2006-10-XX	Jaime Urzua	<jaime_urzua@yahoo.com>
+	* Launch Revision 0.3
+	* Rewrite from the scratch the FLS editor:
+		- Now is much easyer to edit fls structures using a simple GUI.
+		
+	* Add new commands: repvec, subclust, inwichclust
+	
+	* Make changes to build with scilab 4.0 using MINGW32:
+		- The official sciFLT Windows binary distribution is compiled with mingw32.
+	
+	* Fix code bugs:
+		- The NOT condition don't work -> FIXED!
+	
+	* Change code using new TK/TCL calling sequence:
+		- TK_???? are deprecated, change to TCL_????
+
+	* Use SCILAB memory allocation:
+		- See src/sciFLT.h for information
+
+	* Speed up internal code:
+		- Use BLAS lib as much is possible.
+		- Unroll fortran and C subroutines
+		- Use vectorized forms on scilab code
+
+	* General spell check in all files:
+		- Many mistakes!
+	
+
+2004-10-12	Jaime Urzua	<jaime_urzua@yahoo.com>
+	* Launch Revision 0.2 
+	* macros/editfls_plot.sci : Add.
+	* gui/fuzzy_editor.tcl : Now can plot vars. Unset plotsurf (buggy)
+	* man/eng/snorm.gif : Spell check.
+	* man/eng/tnorm.gif : Spell check.
+	* man/eng/tnorm.gif : Fix short description.
+	* man/eng/constant.xml : Correction.
+	* man/eng/linear.xml : Correction.
+	* man/eng/gbellmf.gif : Add.
+	* man/eng/gbellmf.xml : Add image link.
+	* man/eng/dsigmf.gif : Add.
+	* man/eng/dsigmf.xml : Add image link.
+	* man/eng/psigmf.gif : Add.
+	* man/eng/psigmf.xml : Add image link.
+	* man/eng/pimf.gif : Add.
+	* man/eng/pimf.xml : Add image link.
+	* man/eng/smf.gif : Add.
+	* man/eng/smf.xml : Add image link.
+	* man/eng/zmf.gif : Add.
+	* man/eng/zmf.xml : Add image link.
+	* gui/fuzzy_editor.tcl : Add blank page subroutine. Fix bug in sciFLTEditorDrawTree when no page to display. Fix bug in	sciFLTEditorDelFls when delete fls.
+	* README.txt : Change url, also description.
+	* builder.sce : Change LCC check, fix bug during fix man pages.
+	* demos/demos.txt : Add missing description, spell check.	
+	* In linux sciFLT don't work well, it's a subroutine name problem, the	solution :
+		* src/snorm.f : Change subroutine names.
+		* src/tnorm.f : Same as snorm.f
+		* src/sciFLT.h : Reflect the change.
+		* src/inter_sciFLT.c : Reflect the change.
+		* src/flsengine.f : Reflect the change.
+		* src/inter_sciFLT.c : Reflect the name changes.
+
+2004-10-05	Jaime Urzua	<jaime_urzua@yahoo.com>
+	* Launch Revision 0.1 (BETA)

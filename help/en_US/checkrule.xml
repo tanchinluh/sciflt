@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from checkrule.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="checkrule" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>checkrule</refname>
+    <refpurpose>Check rules in fls structure</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   [all_ok,mes]=checkrule(fls)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>fls:</term>
+      <listitem><para>fls structure</para></listitem></varlistentry>
+   <varlistentry><term>all_ok:</term>
+      <listitem><para> scalar, if all_ok is greater than 0 the some or all rules have incorrect representation.</para></listitem></varlistentry>
+   <varlistentry><term>mes:</term>
+      <listitem><para> string. Return a error message.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>checkrule</literal> verify the rule representation in the fls   structure.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// GET A FLS
+fls=loadfls(flt_path()+"demos/fan1.fls");
+[all_ok,mes]=checkrule(fls);
+if (all_ok>0) then
+warning(mes);
+end
+// Make the first rule invalid
+fls.rule(1,1)=500;
+[all_ok,mes]=checkrule(fls);
+if (all_ok>0) then
+warning(mes);
+end
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="fls_structure">fls_structure</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

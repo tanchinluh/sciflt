@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from defuzzm.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="defuzzm" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>defuzzm</refname>
+    <refpurpose>Returns a defuzzified value,</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   y=defuzzm( x, mf_value, method)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>x:</term>
+      <listitem><para>column vector.</para></listitem></varlistentry>
+   <varlistentry><term>mf_value:</term>
+      <listitem><para>member function evaluated at x.</para></listitem></varlistentry>
+   <varlistentry><term>method:</term>
+      <listitem><para>string. Defuzzification method. "centroide" for centroide of area, "bisector" for bisection of area, "mom" for mean of maximum, "lom" for largest of maximum and "som" for smallest of maximum.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>defuzzm </literal> returns a defuzzified value <literal>y</literal>, of a
+member function value <literal>mf_value</literal> at associated variable value
+<literal>x</literal>, using <literal>method</literal> defuzzification strategies.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x=linspace(0,1,100)';
+mf_value=max(0.6*trimf(x,[0 0.2 0.4]),0.4*trimf(x,[0.3 0.6 0.9]));
+y_centroide=defuzzm(x,mf_value,"centroide");
+y_bisector=defuzzm(x,mf_value,"bisector");
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="member_functions">member_functions</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

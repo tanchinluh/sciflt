@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from subclust.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="subclust" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>subclust</refname>
+    <refpurpose>Find cluster centers with substractive clustering.</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   [centers,sigmas]=subclust(X [,r [, opt ]])
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>X:</term>
+      <listitem><para>matrix of reals.The pairs of inputs points.</para></listitem></varlistentry>
+   <varlistentry><term>r:</term>
+      <listitem><para>real vector of real.</para></listitem></varlistentry>
+   <varlistentry><term>opt:</term>
+      <listitem><para>[1x3] vector of real.</para></listitem></varlistentry>
+   <varlistentry><term>centers:</term>
+      <listitem><para>integer, maximum number of iterations. The defaul value is 100</para></listitem></varlistentry>
+   <varlistentry><term>sigmas:</term>
+      <listitem><para>scalar, minimum change value between two consecutive iterations. The default value is 0.001</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+   </para>
+   <para>
+<emphasis role="bold">subclust</emphasis> find cluster centers with substractive clustering for
+a matrix <emphasis role="bold">X</emphasis> in which each row contains a data point. r is a vector
+that specifies a cluster center's range of influence in each of the data
+dimensions, assuming the data falls within a unit hyperbox (internalli
+relized).
+   </para>
+   <para>
+<emphasis role="bold">opt=[ACCEPT_RATIO, REJECT_RATIO, REDUCTION_RATIO]</emphasis>. If opt is
+not provided, then the routine use the followings: ACCEPT_RATIO=0.5,
+REJECT_RATIO=0.15, REDUCTION_RATIO=1.5.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Take 400 random pairs of points centered at (0,0), (3,3), (7,7) and (10,10)
+Xin=[rand(100,2);3+rand(100,2);7+rand(100,2);10+rand(100,2)];
+// Find clusters
+centers=subclust(Xin);
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="fcmeans">fcmeans</link></member>
+   <member><link linkend="inwichclust">inwichclust</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

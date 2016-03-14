@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from fuzzapp.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="fuzzapp" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>fuzzapp</refname>
+    <refpurpose>Multi-Input Single Output Fuzzy Approximation of a Function.</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   fls=fuzzapp( order , domain_i , domain_o , partitions , f [,df] )
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>fls:</term>
+      <listitem><para>fls structure.</para></listitem></varlistentry>
+   <varlistentry><term>order:</term>
+      <listitem><para>integer. 1 for first order, 2 for second order.</para></listitem></varlistentry>
+   <varlistentry><term>domain_i:</term>
+      <listitem><para>matrix of real with dimensions [ninputs,2], were ninputs mean the number of inputs. Each row have two elements in the form [minDom maxDom], where minDom meand the minimum value who take the input, and maxDom the maximum value.</para></listitem></varlistentry>
+   <varlistentry><term>domain_o:</term>
+      <listitem><para>row vector with two elements in the form [minDom maxDom]. minDom means the minimum value of the output, and maxDom the maximum value.</para></listitem></varlistentry>
+   <varlistentry><term>partitions:</term>
+      <listitem><para>column vector with the number or partitions for each input. partitions(j) is the number of partitions for the j input.</para></listitem></varlistentry>
+   <varlistentry><term>f:</term>
+      <listitem><para>function. The function to approximate. The result of f must be a scalar.This function must be vectorized, y=f(X) where X=[value1 , value2 , .... , value_ni] , ni=number of inputs</para></listitem></varlistentry>
+   <varlistentry><term>df:</term>
+      <listitem><para>function. The Jacobian of f. This function is required if order is equal to 2.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>fuzzapp </literal> create a Fuzzy Approximation for the function
+<literal>f</literal>.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// The function to approximate
+deff("y=f(x)","y=sin(x)");
+fls=fuzzapp(1,[-%pi %pi],[-1 1],10,f);
+x=linspace(-%pi,%pi,100)';
+Y_real=f(x);
+Y_fuzz=evalfls(x,fls);
+scf();clf();
+subplot(2,1,1);
+plot2d(x,[Y_real Y_fuzz],leg="real@approximation");
+xtitle("Fuzzy Approximation","x","y=f(x)");
+subplot(2,1,2);
+plot2d(x,abs(Y_real-Y_fuzz));
+xtitle("Approximation Error","x","error");
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

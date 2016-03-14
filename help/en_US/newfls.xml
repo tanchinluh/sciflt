@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from newfls.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="newfls" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>newfls</refname>
+    <refpurpose>Create a new fls structure.</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   fls=newfls([fls_type [,fls_name [,fls_SNorm [,fls_TNorm [,fls_Comp [,fls_defuzzMethod]]]]]])
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>fls_type:</term>
+      <listitem><para>string, fuzzy logic type ("m" - Mamdani or "ts" - Takagi-Sugeno).</para></listitem></varlistentry>
+   <varlistentry><term>fls_name:</term>
+      <listitem><para>string, internal tag name.</para></listitem></varlistentry>
+   <varlistentry><term>fls_SNorm:</term>
+      <listitem><para>string, S-Norm Class.</para></listitem></varlistentry>
+   <varlistentry><term>fls_TNorm:</term>
+      <listitem><para>string, T-Norm Class.</para></listitem></varlistentry>
+   <varlistentry><term>fls_Comp:</term>
+      <listitem><para>string, Complement Class.</para></listitem></varlistentry>
+   <varlistentry><term>fls_defuzzMethod:</term>
+      <listitem><para>string, Defuzzification Method.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+   </para>
+   <para>
+<literal>newfls </literal> create a new fuzzy logic structure.
+   </para>
+   <para>
+The default structure for Mamdani is: Algebaric sum S-Norm Class,
+Algebraic product T-Norm Class, One (classic) Complement Class and
+Centroide Defuzzification Method.
+   </para>
+   <para>
+   </para>
+   <para>
+The default structure for Takagi-Sugeno is: Algebaric sum S-Norm Class,
+Algebraic product T-Norm Class, One (classic) Complement Class and
+Weigthed Average Defuzzification Method.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Create new Mamdani with default values
+fls=newfls('m')
+// Create new Takagi-Sugeno with non-default values.
+fls=newfls('ts','demo','dsum','dprod','one','wtsum')
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="fls_structure">fls_structure</link></member>
+   <member><link linkend="snorm">snorm</link></member>
+   <member><link linkend="tnorm">tnorm</link></member>
+   <member><link linkend="complement">complement</link></member>
+   <member><link linkend="defuzzm">defuzzm</link></member>
+   <member><link linkend="editfls">editfls</link></member>
+   <member><link linkend="addvar">addvar</link></member>
+   <member><link linkend="addmf">addmf</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

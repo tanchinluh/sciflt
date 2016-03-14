@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:lang="en" xml:id="scicos_fls"><info><pubdate>@DATE@</pubdate></info><refnamediv><refname>scicos_fls</refname><refpurpose>Scicos FLS Block.</refpurpose></refnamediv>
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   <refsection><title>Description</title>
+    
+          <para>
+      <inlinemediaobject>
+        <imageobject>
+          <imagedata fileref="scicos_fls.gif"/>
+        </imageobject>
+      </inlinemediaobject>
+    </para>
+    
+
+    
+      <para>This block evaluate a fls structure taked from workspace.</para>
+
+    
+      <para>The user can choose the structure in the usual set sequence.</para>
+  
+   </refsection>
+
+  
+   <refsection><title>See Also</title><simplelist type="inline">
+    
+      <member>
+      
+         <link linkend="evalfls">evalfls</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="scicos_mf">scicos_mf</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="scicos_snorm">scicos_snorm</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="scicos_tnorm">scicos_tnorm</link>
+    
+      </member>
+
+    
+      <member>
+      
+         <link linkend="scicos_complement">scicos_complement</link>
+    
+      </member>
+  
+   </simplelist></refsection>
+
+  
+   <refsection><title>Authors</title><para>Jaime Urzua Grez</para><para>Holger Nahrstaedt</para></refsection>
+
+</refentry>

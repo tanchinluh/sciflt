@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:lang="en" xml:id="about_FLT"><info><pubdate>@DATE@</pubdate></info><refnamediv><refname>about_FLT</refname><refpurpose>About Scilab Fuzzy Logic
+  Toolbox</refpurpose></refnamediv>
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   
+
+  
+   <refsection><title>Description</title>
+    
+      <para>
+         <literal>sciFLT</literal> is a Fuzzy Logic Toolbox designed to scilab, using
+    scilab, FORTRAN and C code.</para>
+
+    
+      <para/>
+
+    
+      <itemizedlist>
+      
+         <listitem>
+        
+            <variablelist>
+          
+               <varlistentry><term>Types of Fuzzy Logic systems</term><listitem>
+            
+                  <para>At this stage, sciFLT work with Mamdani and Takagi-Sugeno
+            Fuzzy logic systems.</para>
+          
+               </listitem></varlistentry>
+
+          
+               <varlistentry><term>Scicos Support</term><listitem>
+            
+                  <para>Member functions, S-Norm, T-Norm, Complement and Fuzzy Logic
+            System (fls) are supported. Also include a palette.</para>
+          
+               </listitem></varlistentry>
+
+          
+               <varlistentry><term>Internal Editor</term><listitem>
+            
+                  <para>sciFLT have an embedded editor written in TCL/TK.</para>
+          
+               </listitem></varlistentry>
+        
+            </variablelist>
+      
+         </listitem>
+    
+      </itemizedlist>
+
+    
+      <para>This program is free software; you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by the Free
+    Software Foundation; either version 2 of the License, or (at your option)
+    any later version.</para>
+
+    
+      <para>This program is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+    or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+    for more details.</para>
+  
+   </refsection>
+
+  
+   <refsection><title>See Also</title><simplelist type="inline">
+    
+      <member>
+      
+         <link linkend="fls_structure">fls_structure</link>
+    
+      </member>
+  
+   </simplelist></refsection>
+
+  
+   <refsection><title>Authors</title><para>Jaime Urzua Grez</para></refsection>
+
+</refentry>

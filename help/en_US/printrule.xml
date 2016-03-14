@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from printrule.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="printrule" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>printrule</refname>
+    <refpurpose>Print fls rules in the screen or put it in a file</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   printrule(fls [,method [,filename]])
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>fls:</term>
+      <listitem><para>fls structure.</para></listitem></varlistentry>
+   <varlistentry><term>method:</term>
+      <listitem><para>string. "ling" for linguistic representation, "symb" for symbolic representation, and "indx" for indexed representation. The default value is "ling".</para></listitem></varlistentry>
+   <varlistentry><term>filename:</term>
+      <listitem><para>string. The file name were to put the rules.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>printule </literal> print the <literal>fls</literal> rules in a human
+readable form. The result can be put in a file named
+<literal>filename</literal>.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// READ A FLS
+fls=loadfls(flt_path()+"demos/fan1.fls");
+// Print rules to screen. Linguistic representation
+printrule(fls);
+// Print rules to screen. Simbolic representation
+printrule(fls,"symb");
+// Print rule to scree. Indexed representation
+printrule(fls,"indx");
+// Print rules in a file
+printrule(fls,"symb",TMPDIR+"/rules.txt");
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="plotsurf">plotsurf</link></member>
+   <member><link linkend="plotvar">plotvar</link></member>
+   <member><link linkend="newfls">newfls</link></member>
+   <member><link linkend="fls_structure">fls_structure</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

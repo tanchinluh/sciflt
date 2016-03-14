@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from delvar.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="delvar" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>delvar</refname>
+    <refpurpose>Delete variable in fls and return it with this change.</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   fls=delvar( fls_input, var_type , var_idx)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>fls_input:</term>
+      <listitem><para>fuzzy logic system (as input).</para></listitem></varlistentry>
+   <varlistentry><term>var_type:</term>
+      <listitem><para>string. "input" for input variable, "output" for output variable.</para></listitem></varlistentry>
+   <varlistentry><term>var_idx:</term>
+      <listitem><para>integer. Variable number.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+<literal>delvar </literal> delete a variable from fuzzy logic system
+<literal>fls_input</literal> and return it with this change as <literal>fls</literal>.
+This command delete the <literal>var_idx</literal> variable (depends of
+<literal>var_type</literal> parameter) and all associated member functions. If
+the fuzzy logic system have rules, then fix the rules reflecting the
+change.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+fls=newfls("m");
+fls=addvar(fls,"input","speed",[0 100])
+fls=addvar(fls,"input","temperature",[0 150])
+// DELETE THE FIRST VARIABLE
+fls=delvar(fls,"input",1)
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="addvar">addvar</link></member>
+   <member><link linkend="delmf">delmf</link></member>
+   <member><link linkend="addmf">addmf</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Jaime Urzua Grez</member>
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

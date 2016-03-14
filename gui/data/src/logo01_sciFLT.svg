@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="468px"
+   height="60px"
+   id="svg4704"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="logo01_sciFLT.svg"
+   inkscape:export-filename="/home/nahrstaedt/svn/software/scb/sciFLT/gui/data/src/icons_new_logosmall.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   version="1.1">
+  <defs
+     id="defs4706">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#elements-f07.svgpattern2172"
+       id="pattern2834"
+       patternTransform="matrix(0.158134,3.696223e-2,-2.349344e-2,0.248792,-5.046986,-1.169868)" />
+    <pattern
+       patternTransform="matrix(0.234375,0.000000,0.000000,0.234375,0,0)"
+       id="elements-f07.svgpattern2655"
+       xlink:href="#elements-f07.svgpattern2650"
+       inkscape:collect="always" />
+    <pattern
+       patternTransform="matrix(0.401743,8.398627e-2,-5.968572e-2,0.565309,163.8675,-159.4674)"
+       id="elements-f07.svgpattern2172"
+       xlink:href="#elements-f07.svgpattern2655"
+       inkscape:collect="always" />
+    <pattern
+       id="elements-f07.svgpattern2650"
+       patternTransform="matrix(0.25,0,0,0.25,0,0)"
+       height="24"
+       width="24"
+       patternUnits="userSpaceOnUse">
+      <path
+         id="elements-f07.svgpath2649"
+         d="M -0.25,24.25 L 24.25,-0.25"
+         style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-opacity:1" />
+    </pattern>
+    <linearGradient
+       id="linearGradient3050">
+      <stop
+         style="stop-color:black;stop-opacity:1;"
+         offset="0"
+         id="stop3052" />
+      <stop
+         style="stop-color:black;stop-opacity:0;"
+         offset="1"
+         id="stop3054" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient9227">
+      <stop
+         style="stop-color:#210080;stop-opacity:1;"
+         offset="0"
+         id="stop9229" />
+      <stop
+         style="stop-color:#210080;stop-opacity:0;"
+         offset="1"
+         id="stop9231" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9227"
+       id="linearGradient7886"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="pad"
+       x1="61.409943"
+       y1="28.552589"
+       x2="228.37869"
+       y2="28.552589" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3050"
+       id="linearGradient2816"
+       x1="20.623947"
+       y1="102.13177"
+       x2="379.48065"
+       y2="102.13177"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.696223,0,0,0.666666,-2.573761,-22.81924)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.4"
+     inkscape:cx="312.78246"
+     inkscape:cy="-16.565656"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1920"
+     inkscape:window-height="1033"
+     inkscape:window-x="1438"
+     inkscape:window-y="-3"
+     showgrid="false"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4709">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     id="layer1"
+     inkscape:groupmode="layer"
+     style="opacity:1">
+    <rect
+       style="opacity:1;fill:white;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25343639;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2824"
+       width="463.15494"
+       height="55.979286"
+       x="2.9462781"
+       y="2.8422027"
+       inkscape:export-filename="/home/nahrstaedt/svn/software/scb/sciFLT/gui/data/src/icons_new_logosmall.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180" />
+    <rect
+       id="elements-f07.svgrect2652"
+       y="-95.577972"
+       x="-9.8160601"
+       height="54.240501"
+       width="191.10551"
+       style="stroke:none;fill-opacity:1.0;fill:none" />
+    <image
+       sodipodi:absref="/home/nahrstaedt/svn/software/scb/sciFLT/gui/data/src/logo.gif"
+       xlink:href="logo.gif"
+       inkscape:export-ydpi="180"
+       inkscape:export-xdpi="180"
+       inkscape:export-filename="/home/nahrstaedt/svn/software/scb/sciFLT/gui/data/src/icons_new_logosmall.png"
+       width="103"
+       height="40"
+       id="image1918"
+       x="51.030491"
+       y="10.537219" />
+    <rect
+       style="opacity:1;fill:url(#linearGradient2816);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25343639;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1921"
+       width="249.84439"
+       height="1.178511"
+       x="11.785113"
+       y="44.679337"
+       inkscape:export-filename="/home/nahrstaedt/svn/software/scb/sciFLT/gui/data/src/icons_new_logosmall.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180" />
+    <path
+       sodipodi:arg2="0.65224913"
+       transform="matrix(4.032249e-2,-4.619558e-2,-4.509423e-2,-4.784259e-2,17.32415,-42.91491)"
+       sodipodi:cy="-1048.6403"
+       sodipodi:arg1="0.54565505"
+       sodipodi:type="star"
+       sodipodi:cx="-651.47363"
+       sodipodi:r2="86.869286"
+       sodipodi:sides="3"
+       inkscape:randomized="0"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:100;font-stretch:ultra-condensed;letter-spacing:0;writing-mode:lr-tb;text-anchor:start;opacity:1;color:black;fill:teal;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:4.19999981;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       id="shapes-f16.svgpath905"
+       inkscape:rounded="-3"
+       sodipodi:r1="266.7514"
+       inkscape:flatsided="false"
+       d="M -423.45786,-910.20211 C -633.01332,-1409.8741 -1124.1319,-1008.2425 -582.43682,-995.91274 C 353.9426,-974.59938 -1814.5112,-1038.5521 -885.37247,-920.39188 C -347.86611,-852.03624 -450.12998,-1478.1732 -731.65541,-1015.2164 C -1218.303,-214.9447 -78.691431,-2060.9044 -645.59057,-1315.3268 C -973.54147,-884.01044 -380.15903,-659.50507 -640.32867,-1134.7917 C -1090.0605,-1956.3767 -61.218238,-46.464232 -423.45786,-910.20211 z "
+       inkscape:export-filename="/home/nahrstaedt/svn/software/scb/sciFLT/gui/data/src/icons_new_logosmall.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:Century Gothic"
+       x="149.08167"
+       y="54.696701"
+       id="text2818"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/nahrstaedt/svn/software/scb/sciFLT/gui/data/src/icons_new_logosmall.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180"><tspan
+         sodipodi:role="line"
+         id="tspan2836"
+         x="149.08167"
+         y="54.696701">Release 0.4</tspan></text>
+  </g>
+</svg>
