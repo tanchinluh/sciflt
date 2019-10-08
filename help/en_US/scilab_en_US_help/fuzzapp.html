@@ -16,7 +16,7 @@
 
       </td>
       <td width="40%" class="center">
-      	<span class="top"><a href="section_5a31c1a462cf83aab9ce5df5afe906bb.html">sciFLT</a></span>
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
 
       </td>
       <td width="30%" class="next">
@@ -29,7 +29,7 @@
 
 
 
-    <span class="path" dir="ltr"><a href="index.html">sciFLT</a> &gt;&gt; <a href="section_5a31c1a462cf83aab9ce5df5afe906bb.html">sciFLT</a> &gt; fuzzapp</span>
+    <span class="path" dir="ltr"><a href="index.html">sciFLT</a> &gt;&gt; <a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a> &gt; fuzzapp</span>
 
     <br /><br />
     <div class="refnamediv"><h1 class="refname">fuzzapp</h1>
@@ -61,16 +61,16 @@
 
 <div class="refsection"><h3 class="title">Examples</h3>
    <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// The function to approximate</span>
-<a class="scilabmacro" href="scilab://deff">deff</a><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">y=f(x)</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">y=sin(x)</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">deff</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">y=f(x)</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">y=sin(x)</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabid">fls</span><span class="scilaboperator">=</span><span class="scilabid">fuzzapp</span><span class="scilabopenclose">(</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilaboperator">-</span><span class="scilabconstants">%pi</span> <span class="scilabconstants">%pi</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilaboperator">-</span><span class="scilabnumber">1</span> <span class="scilabnumber">1</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabnumber">10</span><span class="scilabdefault">,</span><span class="scilabid">f</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
-<span class="scilabid">x</span><span class="scilaboperator">=</span><a class="scilabmacro" href="scilab://linspace">linspace</a><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><span class="scilabconstants">%pi</span><span class="scilabdefault">,</span><span class="scilabconstants">%pi</span><span class="scilabdefault">,</span><span class="scilabnumber">100</span><span class="scilabopenclose">)</span><span class="scilaboperator">&#0039;</span><span class="scilabdefault">;</span>
+<span class="scilabid">x</span><span class="scilaboperator">=</span><span class="scilabid">linspace</span><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><span class="scilabconstants">%pi</span><span class="scilabdefault">,</span><span class="scilabconstants">%pi</span><span class="scilabdefault">,</span><span class="scilabnumber">100</span><span class="scilabopenclose">)</span><span class="scilaboperator">&#0039;</span><span class="scilabdefault">;</span>
 <span class="scilabid">Y_real</span><span class="scilaboperator">=</span><span class="scilabid">f</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabid">Y_fuzz</span><span class="scilaboperator">=</span><span class="scilabid">evalfls</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabid">fls</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
-<a class="scilabmacro" href="scilab://scf">scf</a><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span><a class="scilabmacro" href="scilab://clf">clf</a><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
-<a class="scilabmacro" href="scilab://subplot">subplot</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">scf</span><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span><span class="scilabid">clf</span><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">subplot</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <a class="scilabcommand" href="scilab://plot2d">plot2d</a><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabid">Y_real</span> <span class="scilabid">Y_fuzz</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabid">leg</span><span class="scilaboperator">=</span><span class="scilabstring">&#0034;</span><span class="scilabstring">real@approximation</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <a class="scilabcommand" href="scilab://xtitle">xtitle</a><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">Fuzzy Approximation</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">x</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">y=f(x)</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
-<a class="scilabmacro" href="scilab://subplot">subplot</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">subplot</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <a class="scilabcommand" href="scilab://plot2d">plot2d</a><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><a class="scilabcommand" href="scilab://abs">abs</a><span class="scilabopenclose">(</span><span class="scilabid">Y_real</span><span class="scilaboperator">-</span><span class="scilabid">Y_fuzz</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <a class="scilabcommand" href="scilab://xtitle">xtitle</a><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">Approximation Error</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">x</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">error</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
 
@@ -88,7 +88,7 @@
 
       </td>
       <td width="40%" class="center">
-      	<span class="top"><a href="section_5a31c1a462cf83aab9ce5df5afe906bb.html">sciFLT</a></span>
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
 
       </td>
       <td width="30%" class="next">

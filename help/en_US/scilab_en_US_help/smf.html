@@ -16,7 +16,7 @@
 
       </td>
       <td width="40%" class="center">
-      	<span class="top"><a href="section_5a31c1a462cf83aab9ce5df5afe906bb.html">sciFLT</a></span>
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
 
       </td>
       <td width="30%" class="next">
@@ -29,7 +29,7 @@
 
 
 
-    <span class="path" dir="ltr"><a href="index.html">sciFLT</a> &gt;&gt; <a href="section_5a31c1a462cf83aab9ce5df5afe906bb.html">sciFLT</a> &gt; smf</span>
+    <span class="path" dir="ltr"><a href="index.html">sciFLT</a> &gt;&gt; <a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a> &gt; smf</span>
 
     <br /><br />
     <div class="refnamediv"><h1 class="refname">smf</h1>
@@ -52,12 +52,12 @@ with parameters <code class="literal" dir="ltr">[a,b]</code>.</p>
    <p class="para"></p></div>
 
 <div class="refsection"><h3 class="title">Examples</h3>
-   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">x</span><span class="scilaboperator">=</span><a class="scilabmacro" href="scilab://linspace">linspace</a><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">100</span><span class="scilabopenclose">)</span><span class="scilaboperator">&#0039;</span><span class="scilabdefault">;</span>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">x</span><span class="scilaboperator">=</span><span class="scilabid">linspace</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">100</span><span class="scilabopenclose">)</span><span class="scilaboperator">&#0039;</span><span class="scilabdefault">;</span>
 <span class="scilabid">y1</span><span class="scilaboperator">=</span><span class="scilabid">smf</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">0.2</span> <span class="scilabnumber">0.3</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabid">y2</span><span class="scilaboperator">=</span><span class="scilabid">smf</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">0.2</span> <span class="scilabnumber">0.6</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabid">y3</span><span class="scilaboperator">=</span><span class="scilabid">smf</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">0.2</span> <span class="scilabnumber">0.8</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabid">y4</span><span class="scilaboperator">=</span><span class="scilabid">smf</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">0.8</span> <span class="scilabnumber">0.4</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
-<a class="scilabmacro" href="scilab://scf">scf</a><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span><a class="scilabmacro" href="scilab://clf">clf</a><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">scf</span><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span><span class="scilabid">clf</span><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <a class="scilabcommand" href="scilab://plot2d">plot2d</a><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabid">y1</span> <span class="scilabid">y2</span> <span class="scilabid">y3</span> <span class="scilabid">y4</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabid">leg</span><span class="scilaboperator">=</span><span class="scilabstring">&#0034;</span><span class="scilabstring">y1@y2@y3</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <a class="scilabcommand" href="scilab://xtitle">xtitle</a><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">S-Shaped Member Function Example</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">x</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">mu(x)</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
 
@@ -79,7 +79,7 @@ with parameters <code class="literal" dir="ltr">[a,b]</code>.</p>
 
       </td>
       <td width="40%" class="center">
-      	<span class="top"><a href="section_5a31c1a462cf83aab9ce5df5afe906bb.html">sciFLT</a></span>
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
 
       </td>
       <td width="30%" class="next">

@@ -141,8 +141,12 @@ function sciFLTlib = sciFLT_load()
     // A Welcome message.
 
     //mprintf("\tType ""help hypt_overview"" for quick start.\n");
-    mprintf("\tType ""sciFLTdemo"" to see demos and examples..\n");
-
+    if (getos() ~= "Darwin") then
+        mprintf("\tType ""sciFLTdemo"" to see demos and examples..\n");
+    else
+        mprintf("\tNotes: GUI with tcl/tk is not available for MacOS..\n");
+    end
+    
 endfunction 
 
 if ( isdef("sciFLTlib") ) then

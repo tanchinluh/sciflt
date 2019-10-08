@@ -14,8 +14,8 @@
 
 /* Table of constant values */
 
-static integer c__1 = 1;
-static integer c__0 = 0;
+static int c__1 = 1;
+static int c__0 = 0;
 
 /* ----------------------------------------------------------------------- */
 /* T-NORM */
@@ -38,23 +38,23 @@ static integer c__0 = 0;
 /* ************************************************** */
 /* GENERAL ROUTINE */
 /* ************************************************** */
-/* Subroutine */ int ctnorm_(char *class1, doublereal *x, integer *m, integer 
-	*n, doublereal *par, integer *npar, doublereal *y, integer *ierr, 
+/* Subroutine */ int ctnorm_(char *class1, double *x, int *m, int 
+	*n, double *par, int *npar, double *y, int *ierr, 
 	ftnlen class1_len)
 {
     /* System generated locals */
-    integer x_dim1, x_offset, i__1, i__2;
-    doublereal d__1, d__2, d__3;
+    int x_dim1, x_offset, i__1, i__2;
+    double d__1, d__2, d__3;
 
     /* Builtin functions */
-    integer s_cmp(char *, char *, ftnlen, ftnlen);
-    double pow_dd(doublereal *, doublereal *);
+    int s_cmp(char *, char *, ftnlen, ftnlen);
+    double pow_dd(double *, double *);
 
     /* Local variables */
-    static integer i__, j;
-    static doublereal tmp1, tmp2;
-    extern /* Subroutine */ int erro_(char *, ftnlen), dcopy_(integer *, 
-	    doublereal *, integer *, doublereal *, integer *);
+    static int i__, j;
+    static double tmp1, tmp2;
+    extern /* Subroutine */ int erro_(char *, ftnlen), dcopy_(int *, 
+	    double *, int *, double *, int *);
 
 /* DUBOUIS T-NORM CLASS */
     /* Parameter adjustments */
@@ -202,16 +202,16 @@ L9999:
 /* ************************************************** */
 /* THIS SUBROUTINE IS FOR INTERNAL USE */
 /* ************************************************** */
-/* Subroutine */ int ctnorm2_(integer *classid, doublereal *x, integer *m, 
-	integer *n, doublereal *par, doublereal *y, integer *ierr)
+/* Subroutine */ int ctnorm2_(int *classid, double *x, int *m, 
+	int *n, double *par, double *y, int *ierr)
 {
     /* System generated locals */
-    integer x_dim1, x_offset;
+    int x_dim1, x_offset;
 
     /* Local variables */
     extern /* Subroutine */ int erro_(char *, ftnlen), ctnorm_(char *, 
-	    doublereal *, integer *, integer *, doublereal *, integer *, 
-	    doublereal *, integer *, ftnlen);
+	    double *, int *, int *, double *, int *, 
+	    double *, int *, ftnlen);
 
     /* Parameter adjustments */
     x_dim1 = *m;
@@ -249,15 +249,15 @@ L9999:
 /* ************************************************** */
 /* THIS SUBROUTINE IS USED IN SCICOS */
 /* ************************************************** */
-/* Subroutine */ int stnorm_(integer *flag__, integer *nevprt, doublereal *t, 
-	doublereal *xd, doublereal *x, integer *nx, doublereal *z__, integer *
-	nz, doublereal *tvec, integer *ntvec, doublereal *rpar, integer *
-	nrpar, integer *ipar, integer *nipar, doublereal *u, integer *nu, 
-	doublereal *y, integer *ny)
+/* Subroutine */ int stnorm_(int *flag__, int *nevprt, double *t, 
+	double *xd, double *x, int *nx, double *z__, int *
+	nz, double *tvec, int *ntvec, double *rpar, int *
+	nrpar, int *ipar, int *nipar, double *u, int *nu, 
+	double *y, int *ny)
 {
-    static integer ierr;
-    extern /* Subroutine */ int ctnorm_(char *, doublereal *, integer *, 
-	    integer *, doublereal *, integer *, doublereal *, integer *, 
+    static int ierr;
+    extern /* Subroutine */ int ctnorm_(char *, double *, int *, 
+	    int *, double *, int *, double *, int *, 
 	    ftnlen);
 
     /* Parameter adjustments */

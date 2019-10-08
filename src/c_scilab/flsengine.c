@@ -14,9 +14,9 @@
 
 /* Table of constant values */
 
-static integer c__1 = 1;
-static doublereal c_b13 = 0.;
-static doublereal c_b14 = 1.;
+static int c__1 = 1;
+static double c_b13 = 0.;
+static double c_b14 = 1.;
 
 /* ----------------------------------------------------------------------- */
 /* EVALUATE FLS STRUCTURE */
@@ -37,51 +37,51 @@ static doublereal c_b14 = 1.;
 /* 2004-11-03 Change matrix initialization subroutine */
 /* 2004-11-07 Change some internal subroutines to use BLAS primitives */
 /* ----------------------------------------------------------------------- */
-/* Subroutine */ int flsengine_(doublereal *x, integer *mid1, doublereal *
-	mid2, doublereal *mew, doublereal *mrule, doublereal *mdomo, 
-	doublereal *mpari, doublereal *mparo, integer *nparo, integer *npev, 
-	integer *ninputs, integer *noutputs, integer *nrules, integer *
-	npoints, doublereal *tmp1, doublereal *tmp2, doublereal *tmp3, 
-	doublereal *tmp4, integer *maxnpev, doublereal *y, integer *ierr)
+/* Subroutine */ int flsengine_(double *x, int *mid1, double *
+	mid2, double *mew, double *mrule, double *mdomo, 
+	double *mpari, double *mparo, int *nparo, int *npev, 
+	int *ninputs, int *noutputs, int *nrules, int *
+	npoints, double *tmp1, double *tmp2, double *tmp3, 
+	double *tmp4, int *maxnpev, double *y, int *ierr)
 {
 	/* System generated locals */
-	integer x_dim1, x_offset, mrule_dim1, mrule_offset, mdomo_dim1, 
+	int x_dim1, x_offset, mrule_dim1, mrule_offset, mdomo_dim1, 
 		mdomo_offset, mparo_dim1, mparo_offset, y_dim1, y_offset, 
 		tmp1_dim1, tmp1_offset, tmp2_dim1, tmp2_offset, tmp4_dim1, 
 		tmp4_offset, i__1, i__2, i__3, i__4;
-	doublereal d__1, d__2, d__3, d__4;
+	double d__1, d__2, d__3, d__4;
 
 	/* Builtin functions */
-	double d_int(doublereal *), d_nint(doublereal *), pow_dd(doublereal *, 
-		doublereal *);
+	double d_int(double *), d_nint(double *), pow_dd(double *, 
+		double *);
 
 	/* Local variables */
-	static doublereal tmp_idx3__;
-	extern /* Subroutine */ int defuzzm2_(integer *, doublereal *, integer *, 
-		doublereal *, doublereal *, integer *), dolinspa_(doublereal *, 
-		doublereal *, integer *, doublereal *);
-	static integer i__;
+	static double tmp_idx3__;
+	extern /* Subroutine */ int defuzzm2_(int *, double *, int *, 
+		double *, double *, int *), dolinspa_(double *, 
+		double *, int *, double *);
+	static int i__;
 	static logical dowarning;
-	static integer ip;
-	static doublereal dd1;
-	static integer pt1;
-	extern /* Subroutine */ int complement2_(integer *, doublereal *, integer 
-		*, integer *, doublereal *, doublereal *, integer *);
-	static integer inp, rul, idx1, idx2;
-	static doublereal idx3;
-	extern integer isgn_(integer *);
-	static doublereal esum;
-	static integer outp;
-	extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-		integer *), daxpy_(integer *, doublereal *, doublereal *, integer 
-		*, doublereal *, integer *);
-	static doublereal eprod1, eprod2;
-	extern /* Subroutine */ int mfeval2_(integer *, doublereal *, integer *, 
-		integer *, doublereal *, doublereal *, integer *), csnorm2_(
-		integer *, doublereal *, integer *, integer *, doublereal *, 
-		doublereal *, integer *), ctnorm2_(integer *, doublereal *, 
-		integer *, integer *, doublereal *, doublereal *, integer *), 
-		uinival_(doublereal *, integer *, doublereal *);
+	static int ip;
+	static double dd1;
+	static int pt1;
+	extern /* Subroutine */ int complement2_(int *, double *, int 
+		*, int *, double *, double *, int *);
+	static int inp, rul, idx1, idx2;
+	static double idx3;
+	extern int isgn_(int *);
+	static double esum;
+	static int outp;
+	extern /* Subroutine */ int dscal_(int *, double *, double *, 
+		int *), daxpy_(int *, double *, double *, int 
+		*, double *, int *);
+	static double eprod1, eprod2;
+	extern /* Subroutine */ int mfeval2_(int *, double *, int *, 
+		int *, double *, double *, int *), csnorm2_(
+		int *, double *, int *, int *, double *, 
+		double *, int *), ctnorm2_(int *, double *, 
+		int *, int *, double *, double *, int *), 
+		uinival_(double *, int *, double *);
 
 /* ----------------------------------------------------------------------- */
 /* COMPUTE THE IF PART */
@@ -123,8 +123,8 @@ static doublereal c_b14 = 1.;
 	for (rul = 1; rul <= i__1; ++rul) {
 	i__2 = *ninputs;
 	for (inp = 1; inp <= i__2; ++inp) {
-		idx1 = (i__3 = (integer) mrule[rul + inp * mrule_dim1], abs(i__3));
-		i__3 = (integer) mrule[rul + inp * mrule_dim1];
+		idx1 = (i__3 = (int) mrule[rul + inp * mrule_dim1], abs(i__3));
+		i__3 = (int) mrule[rul + inp * mrule_dim1];
 		idx2 = isgn_(&i__3);
 		//idx1 = abs(int(mrule(rul, inp)))
 		//idx2 = isgn(int(mrule(rul, inp)))
@@ -166,7 +166,7 @@ static doublereal c_b14 = 1.;
 			}
 		}
 		} else {
-		dd1 = (doublereal) ((integer) mrule[rul + (*ninputs + *noutputs + 1) * mrule_dim1]);
+		dd1 = (double) ((int) mrule[rul + (*ninputs + *noutputs + 1) * mrule_dim1]);
 		uinival_(&tmp1[inp * tmp1_dim1 + 1], npoints, &dd1);
 		}
 		
@@ -179,7 +179,7 @@ static doublereal c_b14 = 1.;
 
 
 /*      DO THE S-NORM OR THE T-NORM */
-	if ((integer) mrule[rul + (*ninputs + *noutputs + 1) * mrule_dim1] == 0) {
+	if ((int) mrule[rul + (*ninputs + *noutputs + 1) * mrule_dim1] == 0) {
 		csnorm2_(&mid1[2], &tmp1[tmp1_offset], npoints, ninputs, &mid2[1],&tmp2[rul * tmp2_dim1 + 1], ierr);
 		if (*ierr > 0) {
 		goto L9999;
@@ -248,9 +248,9 @@ static doublereal c_b14 = 1.;
 		uinival_(&tmp4[tmp4_offset], &npev[outp], &c_b13);
 		i__3 = *nrules;
 		for (rul = 1; rul <= i__3; ++rul) {
-		idx1 = (i__4 = (integer) mrule[rul + (*ninputs + outp) * mrule_dim1], abs(i__4));
+		idx1 = (i__4 = (int) mrule[rul + (*ninputs + outp) * mrule_dim1], abs(i__4));
 
-		i__4 = (integer) mrule[rul + (*ninputs + outp) * mrule_dim1];
+		i__4 = (int) mrule[rul + (*ninputs + outp) * mrule_dim1];
 		idx2 = isgn_(&i__4);
 /*         idx3=hedge(mrule(rul,ninputs+outp)) */
 		d__4 = (d__2 = mrule[rul + (*ninputs + outp) * mrule_dim1], abs(d__2));
@@ -398,7 +398,7 @@ L2000:
 	for (rul = 1; rul <= i__1; ++rul) {
 	i__2 = *noutputs;
 	for (outp = 1; outp <= i__2; ++outp) {
-		idx1 = (i__3 = (integer) mrule[rul + (*ninputs + outp) * mrule_dim1], abs(i__3));
+		idx1 = (i__3 = (int) mrule[rul + (*ninputs + outp) * mrule_dim1], abs(i__3));
 		d__4 = (d__2 = mrule[rul + (*ninputs + outp) * mrule_dim1], abs(d__2));
 		d__3 = ((d__1 = mrule[rul + (*ninputs + outp) * mrule_dim1], abs(d__1)) - d_int(&d__4)) * 100.;
 		idx3 = d_nint(&d__3) / 10.;
@@ -437,7 +437,7 @@ L2000:
 	uinival_(&tmp3[1], npoints, &c_b13);
 	i__2 = *nrules;
 	for (rul = 1; rul <= i__2; ++rul) {
-		if ((integer) mrule[rul + (*ninputs + outp) * mrule_dim1] != 0) {
+		if ((int) mrule[rul + (*ninputs + outp) * mrule_dim1] != 0) {
 		daxpy_(npoints, &mew[rul], &tmp2[(rul + (outp - 1) * *nrules) * tmp2_dim1 + 1], &c__1, &tmp3[1], &c__1);
 		}
 /* L2260: */

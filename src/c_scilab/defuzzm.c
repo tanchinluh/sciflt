@@ -29,18 +29,18 @@
 /* ************************************************** */
 /* GENERAL ROUTINE */
 /* ************************************************** */
-/* Subroutine */ int defuzzm_(char *method, doublereal *x, integer *m, 
-	doublereal *y2, doublereal *ou, integer *ierr, ftnlen method_len)
+/* Subroutine */ int defuzzm_(char *method, double *x, int *m, 
+	double *y2, double *ou, int *ierr, ftnlen method_len)
 {
     /* System generated locals */
-    integer i__1;
+    int i__1;
 
     /* Builtin functions */
-    integer s_cmp(char *, char *, ftnlen, ftnlen);
+    int s_cmp(char *, char *, ftnlen, ftnlen);
 
     /* Local variables */
-    static integer i__;
-    static doublereal tmp1, tmp2;
+    static int i__;
+    static double tmp1, tmp2;
     extern /* Subroutine */ int erro_(char *, ftnlen);
 
 
@@ -173,11 +173,11 @@ L220:
 /* ************************************************** */
 /* CALL BY ID */
 /* ************************************************** */
-/* Subroutine */ int defuzzm2_(integer *methodid, doublereal *x, integer *m, 
-	doublereal *y2, doublereal *ou, integer *ierr)
+/* Subroutine */ int defuzzm2_(int *methodid, double *x, int *m, 
+	double *y2, double *ou, int *ierr)
 {
     extern /* Subroutine */ int erro_(char *, ftnlen), defuzzm_(char *, 
-	    doublereal *, integer *, doublereal *, doublereal *, integer *, 
+	    double *, int *, double *, double *, int *, 
 	    ftnlen);
 
     /* Parameter adjustments */

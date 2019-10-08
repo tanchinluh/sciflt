@@ -14,7 +14,7 @@
 
 /* Table of constant values */
 
-static integer c__1 = 1;
+static int c__1 = 1;
 
 /* ----------------------------------------------------------------------- */
 /* UTILITY */
@@ -42,16 +42,16 @@ static integer c__1 = 1;
 /* -------------------------------------------------- */
 /* Repeat a column vector y(:,1:n)=x */
 /* -------------------------------------------------- */
-/* Subroutine */ int repvecc_(doublereal *y, doublereal *x, integer *m, 
-	integer *n)
+/* Subroutine */ int repvecc_(double *y, double *x, int *m, 
+	int *n)
 {
     /* System generated locals */
-    integer y_dim1, y_offset, i__1;
+    int y_dim1, y_offset, i__1;
 
     /* Local variables */
-    static integer j;
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
+    static int j;
+    extern /* Subroutine */ int dcopy_(int *, double *, int *, 
+	    double *, int *);
 
     /* Parameter adjustments */
     --x;
@@ -72,15 +72,15 @@ static integer c__1 = 1;
 /* -------------------------------------------------- */
 /* Repeat a row vector y(1:m,:)=x */
 /* -------------------------------------------------- */
-/* Subroutine */ int repvec_(doublereal *y, doublereal *x, integer *m, 
-	integer *n)
+/* Subroutine */ int repvec_(double *y, double *x, int *m, 
+	int *n)
 {
     /* System generated locals */
-    integer y_dim1, y_offset, i__1;
+    int y_dim1, y_offset, i__1;
 
     /* Local variables */
-    static integer j;
-    extern /* Subroutine */ int uinival_(doublereal *, integer *, doublereal *
+    static int j;
+    extern /* Subroutine */ int uinival_(double *, int *, double *
 	    );
 
     /* Parameter adjustments */
@@ -101,13 +101,13 @@ static integer c__1 = 1;
 /* -------------------------------------------------- */
 /* Unrolled matrix initialization */
 /* -------------------------------------------------- */
-/* Subroutine */ int uinival_(doublereal *x, integer *sz, doublereal *va)
+/* Subroutine */ int uinival_(double *x, int *sz, double *va)
 {
     /* System generated locals */
-    integer i__1;
+    int i__1;
 
     /* Local variables */
-    static integer i__, m;
+    static int i__, m;
 
     /* Parameter adjustments */
     --x;
@@ -140,12 +140,12 @@ L20:
 } /* uinival_ */
 
 /* -------------------------------------------------- */
-/* INTEGER SIGN */
+/* int SIGN */
 /* -------------------------------------------------- */
-integer isgn_(integer *n)
+int isgn_(int *n)
 {
     /* System generated locals */
-    integer ret_val;
+    int ret_val;
 
     if (*n > 0) {
 	ret_val = 1;
@@ -158,15 +158,15 @@ integer isgn_(integer *n)
 } /* isgn_ */
 
 /* -------------------------------------------------- */
-/* INTEGER SIGN */
+/* int SIGN */
 /* -------------------------------------------------- */
-doublereal hedge_(doublereal *n)
+double hedge_(double *n)
 {
     /* System generated locals */
-    doublereal ret_val, d__1, d__2;
+    double ret_val, d__1, d__2;
 
     /* Builtin functions */
-    double d_int(doublereal *), d_nint(doublereal *);
+    double d_int(double *), d_nint(double *);
 
     d__2 = abs(*n);
     d__1 = (abs(*n) - d_int(&d__2)) * 100.;
@@ -177,15 +177,15 @@ doublereal hedge_(doublereal *n)
 /* -------------------------------------------------- */
 /* GET MATRIX OF WEIGTHS */
 /* -------------------------------------------------- */
-/* Subroutine */ int getmw_(doublereal *rule, integer *nrules, integer *
-	ninputs, integer *noutputs, doublereal *mwe)
+/* Subroutine */ int getmw_(double *rule, int *nrules, int *
+	ninputs, int *noutputs, double *mwe)
 {
     /* System generated locals */
-    integer rule_dim1, rule_offset;
+    int rule_dim1, rule_offset;
 
     /* Local variables */
-    extern /* Subroutine */ int dcopy_(integer *, doublereal *, integer *, 
-	    doublereal *, integer *);
+    extern /* Subroutine */ int dcopy_(int *, double *, int *, 
+	    double *, int *);
 
     /* Parameter adjustments */
     rule_dim1 = *nrules;
@@ -202,13 +202,13 @@ doublereal hedge_(doublereal *n)
 /* -------------------------------------------------- */
 /* Make x=int(y(1:sz)) */
 /* -------------------------------------------------- */
-/* Subroutine */ int dicopy_(doublereal *x, integer *y, integer *sz)
+/* Subroutine */ int dicopy_(double *x, int *y, int *sz)
 {
     /* System generated locals */
-    integer i__1;
+    int i__1;
 
     /* Local variables */
-    static integer i__, m;
+    static int i__, m;
 
     /* Parameter adjustments */
     --y;
@@ -221,7 +221,7 @@ doublereal hedge_(doublereal *n)
     }
     i__1 = m;
     for (i__ = 1; i__ <= i__1; ++i__) {
-	y[i__] = (integer) x[i__];
+	y[i__] = (int) x[i__];
 /* L10: */
     }
     if (*sz < 5) {
@@ -231,11 +231,11 @@ L20:
     ++m;
     i__1 = *sz;
     for (i__ = m; i__ <= i__1; i__ += 5) {
-	y[i__] = (integer) x[i__];
-	y[i__ + 1] = (integer) x[i__ + 1];
-	y[i__ + 2] = (integer) x[i__ + 2];
-	y[i__ + 3] = (integer) x[i__ + 3];
-	y[i__ + 4] = (integer) x[i__ + 4];
+	y[i__] = (int) x[i__];
+	y[i__ + 1] = (int) x[i__ + 1];
+	y[i__ + 2] = (int) x[i__ + 2];
+	y[i__ + 3] = (int) x[i__ + 3];
+	y[i__ + 4] = (int) x[i__ + 4];
 /* L30: */
     }
     return 0;
@@ -244,13 +244,13 @@ L20:
 /* -------------------------------------------------- */
 /* Make x=dble(y(1:sz)) */
 /* -------------------------------------------------- */
-/* Subroutine */ int idcopy_(integer *x, doublereal *y, integer *sz)
+/* Subroutine */ int idcopy_(int *x, double *y, int *sz)
 {
     /* System generated locals */
-    integer i__1;
+    int i__1;
 
     /* Local variables */
-    static integer i__, m;
+    static int i__, m;
 
     /* Parameter adjustments */
     --y;
@@ -263,7 +263,7 @@ L20:
     }
     i__1 = m;
     for (i__ = 1; i__ <= i__1; ++i__) {
-	y[i__] = (doublereal) x[i__];
+	y[i__] = (double) x[i__];
 /* L10: */
     }
     if (*sz < 5) {
@@ -273,11 +273,11 @@ L20:
     ++m;
     i__1 = *sz;
     for (i__ = m; i__ <= i__1; i__ += 5) {
-	y[i__] = (doublereal) x[i__];
-	y[i__ + 1] = (doublereal) x[i__ + 1];
-	y[i__ + 2] = (doublereal) x[i__ + 2];
-	y[i__ + 3] = (doublereal) x[i__ + 3];
-	y[i__ + 4] = (doublereal) x[i__ + 4];
+	y[i__] = (double) x[i__];
+	y[i__ + 1] = (double) x[i__ + 1];
+	y[i__ + 2] = (double) x[i__ + 2];
+	y[i__ + 3] = (double) x[i__ + 3];
+	y[i__ + 4] = (double) x[i__ + 4];
 /* L30: */
     }
     return 0;
@@ -286,13 +286,13 @@ L20:
 /* -------------------------------------------------- */
 /* Make x=(y(1:sz)) */
 /* -------------------------------------------------- */
-/* Subroutine */ int ddcopy_(doublereal *x, doublereal *y, integer *sz)
+/* Subroutine */ int ddcopy_(double *x, double *y, int *sz)
 {
     /* System generated locals */
-    integer i__1;
+    int i__1;
 
     /* Local variables */
-    static integer i__, m;
+    static int i__, m;
 
     /* Parameter adjustments */
     --y;
@@ -328,15 +328,15 @@ L20:
 /* -------------------------------------------------- */
 /* CREATE A LINEAR SPACE */
 /* -------------------------------------------------- */
-/* Subroutine */ int dolinspa_(doublereal *mindom, doublereal *maxdom, 
-	integer *npart, doublereal *x)
+/* Subroutine */ int dolinspa_(double *mindom, double *maxdom, 
+	int *npart, double *x)
 {
     /* System generated locals */
-    integer i__1;
+    int i__1;
 
     /* Local variables */
-    static integer i__, m;
-    static doublereal dt;
+    static int i__, m;
+    static double dt;
 
     /* Parameter adjustments */
     --x;

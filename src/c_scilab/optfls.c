@@ -14,9 +14,9 @@
 
 /* Table of constant values */
 
-static doublereal c_b2 = 1.;
-static integer c__1 = 1;
-static doublereal c_b8 = 0.;
+static double c_b2 = 1.;
+static int c__1 = 1;
+static double c_b8 = 0.;
 
 /* ----------------------------------------------------------------------- */
 /* OPTIMIZATION FLS STRUCTURES */
@@ -39,18 +39,18 @@ static doublereal c_b8 = 0.;
 /* Compute the following */
 /* y=prod(x,'c')/sum(prod(x,'c')) */
 /* -------------------------------------------------- */
-/* Subroutine */ int fltmulnor_(doublereal *x, integer *m, integer *n, 
-	doublereal *y)
+/* Subroutine */ int fltmulnor_(double *x, int *m, int *n, 
+	double *y)
 {
     /* System generated locals */
-    integer x_dim1, x_offset, i__1, i__2;
-    doublereal d__1;
+    int x_dim1, x_offset, i__1, i__2;
+    double d__1;
 
     /* Local variables */
-    static integer i__, j;
-    static doublereal ys;
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *), uinival_(doublereal *, integer *, doublereal *);
+    static int i__, j;
+    static double ys;
+    extern /* Subroutine */ int dscal_(int *, double *, double *, 
+	    int *), uinival_(double *, int *, double *);
 
     /* Parameter adjustments */
     --y;
@@ -84,18 +84,18 @@ static doublereal c_b8 = 0.;
 /* Compute the following */
 /* y=sum(x,'c')/sum(sum(x,'c')) */
 /* -------------------------------------------------- */
-/* Subroutine */ int fltsumnor_(doublereal *x, integer *m, integer *n, 
-	doublereal *y)
+/* Subroutine */ int fltsumnor_(double *x, int *m, int *n, 
+	double *y)
 {
     /* System generated locals */
-    integer x_dim1, x_offset, i__1, i__2;
-    doublereal d__1;
+    int x_dim1, x_offset, i__1, i__2;
+    double d__1;
 
     /* Local variables */
-    static integer i__, j;
-    static doublereal ys;
-    extern /* Subroutine */ int dscal_(integer *, doublereal *, doublereal *, 
-	    integer *), uinival_(doublereal *, integer *, doublereal *);
+    static int i__, j;
+    static double ys;
+    extern /* Subroutine */ int dscal_(int *, double *, double *, 
+	    int *), uinival_(double *, int *, double *);
 
     /* Parameter adjustments */
     --y;

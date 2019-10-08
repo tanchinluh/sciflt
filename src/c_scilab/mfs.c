@@ -14,12 +14,12 @@
 
 /* Table of constant values */
 
-static integer c__1000 = 1000;
-static integer c__1010 = 1010;
-static integer c__1020 = 1020;
-static integer c__1030 = 1030;
-static integer c__1040 = 1040;
-static integer c__1 = 1;
+static int c__1000 = 1000;
+static int c__1010 = 1010;
+static int c__1020 = 1020;
+static int c__1030 = 1030;
+static int c__1040 = 1040;
+static int c__1 = 1;
 
 /* ----------------------------------------------------------------------- */
 /* Member functions */
@@ -42,17 +42,17 @@ static integer c__1 = 1;
 /* ************************************************** */
 /* TRIANGULAR MEMBER FUNCTION */
 /* ************************************************** */
-/* Subroutine */ int trimf_(doublereal *x, integer *m, integer *n, doublereal 
-	*par, doublereal *y, integer *ierr)
+/* Subroutine */ int trimf_(double *x, int *m, int *n, double 
+	*par, double *y, int *ierr)
 {
     /* System generated locals */
-    integer x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
+    int x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
 
     /* Local variables */
-    static doublereal a, b, c__;
-    static integer i__, j;
-    static doublereal tmp1, tmp2;
-    extern /* Subroutine */ int flterr_(integer *);
+    static double a, b, c__;
+    static int i__, j;
+    static double tmp1, tmp2;
+    extern /* Subroutine */ int flterr_(int *);
 
     /* Parameter adjustments */
     y_dim1 = *m;
@@ -103,17 +103,17 @@ L9999:
 /* ************************************************** */
 /* TRAPEZOIDAL MEMBER FUNCTION */
 /* ************************************************** */
-/* Subroutine */ int trapmf_(doublereal *x, integer *m, integer *n, 
-	doublereal *par, doublereal *y, integer *ierr)
+/* Subroutine */ int trapmf_(double *x, int *m, int *n, 
+	double *par, double *y, int *ierr)
 {
     /* System generated locals */
-    integer x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
+    int x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
 
     /* Local variables */
-    static doublereal a, b, c__, d__;
-    static integer i__, j;
-    static doublereal tmp1, tmp2;
-    extern /* Subroutine */ int flterr_(integer *);
+    static double a, b, c__, d__;
+    static int i__, j;
+    static double tmp1, tmp2;
+    extern /* Subroutine */ int flterr_(int *);
 
     /* Parameter adjustments */
     y_dim1 = *m;
@@ -165,21 +165,21 @@ L9999:
 /* ************************************************** */
 /* GAUSSIAN MEMBER FUNCTION */
 /* ************************************************** */
-/* Subroutine */ int gaussmf_(doublereal *x, integer *m, integer *n, 
-	doublereal *par, doublereal *y, integer *ierr)
+/* Subroutine */ int gaussmf_(double *x, int *m, int *n, 
+	double *par, double *y, int *ierr)
 {
     /* System generated locals */
-    integer x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
-    doublereal d__1;
+    int x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
+    double d__1;
 
     /* Builtin functions */
-    double exp(doublereal);
+    double exp(double);
 
     /* Local variables */
-    static doublereal c__;
-    static integer i__, j;
-    static doublereal sig, tmp1, tmp2;
-    extern /* Subroutine */ int flterr_(integer *);
+    static double c__;
+    static int i__, j;
+    static double sig, tmp1, tmp2;
+    extern /* Subroutine */ int flterr_(int *);
 
     /* Parameter adjustments */
     y_dim1 = *m;
@@ -221,20 +221,20 @@ L9999:
 /* ************************************************** */
 /* EXTENDED GAUSSIAN MEMBER FUNCTION */
 /* ************************************************** */
-/* Subroutine */ int gauss2mf_(doublereal *x, integer *m, integer *n, 
-	doublereal *par, doublereal *y, integer *ierr)
+/* Subroutine */ int gauss2mf_(double *x, int *m, int *n, 
+	double *par, double *y, int *ierr)
 {
     /* System generated locals */
-    integer x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
-    doublereal d__1;
+    int x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
+    double d__1;
 
     /* Builtin functions */
-    double exp(doublereal);
+    double exp(double);
 
     /* Local variables */
-    static integer i__, j;
-    static doublereal c1, c2, sig1, sig2, tmp1, tmp2, tmp3, tmp4;
-    extern /* Subroutine */ int flterr_(integer *);
+    static int i__, j;
+    static double c1, c2, sig1, sig2, tmp1, tmp2, tmp3, tmp4;
+    extern /* Subroutine */ int flterr_(int *);
 
     /* Parameter adjustments */
     y_dim1 = *m;
@@ -292,19 +292,19 @@ L9999:
 /* ************************************************** */
 /* SIGMOIDAL MEMBER FUNCTION */
 /* ************************************************** */
-/* Subroutine */ int sigmf_(doublereal *x, integer *m, integer *n, doublereal 
-	*par, doublereal *y, integer *ierr)
+/* Subroutine */ int sigmf_(double *x, int *m, int *n, double 
+	*par, double *y, int *ierr)
 {
     /* System generated locals */
-    integer x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
+    int x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
 
     /* Builtin functions */
-    double exp(doublereal);
+    double exp(double);
 
     /* Local variables */
-    static doublereal a, b;
-    static integer i__, j;
-    static doublereal tmp1;
+    static double a, b;
+    static int i__, j;
+    static double tmp1;
 
     /* Parameter adjustments */
     y_dim1 = *m;
@@ -337,19 +337,19 @@ L9999:
 /* ************************************************** */
 /* PRODUCT OF TWO SIGMOIDAL MEMBER FUNCTION */
 /* ************************************************** */
-/* Subroutine */ int psigmf_(doublereal *x, integer *m, integer *n, 
-	doublereal *par, doublereal *y, integer *ierr)
+/* Subroutine */ int psigmf_(double *x, int *m, int *n, 
+	double *par, double *y, int *ierr)
 {
     /* System generated locals */
-    integer x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
+    int x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
 
     /* Builtin functions */
-    double exp(doublereal);
+    double exp(double);
 
     /* Local variables */
-    static doublereal a, b, c__, d__;
-    static integer i__, j;
-    static doublereal tmp1, tmp2;
+    static double a, b, c__, d__;
+    static int i__, j;
+    static double tmp1, tmp2;
 
 /* INITIALIZE SOME INTERNAL */
     /* Parameter adjustments */
@@ -388,20 +388,20 @@ L9999:
 /* ************************************************** */
 /* DIFFERENCE OF TWO SIGMOIDAL MEMBER FUNCTION */
 /* ************************************************** */
-/* Subroutine */ int dsigmf_(doublereal *x, integer *m, integer *n, 
-	doublereal *par, doublereal *y, integer *ierr)
+/* Subroutine */ int dsigmf_(double *x, int *m, int *n, 
+	double *par, double *y, int *ierr)
 {
     /* System generated locals */
-    integer x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
-    doublereal d__1;
+    int x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
+    double d__1;
 
     /* Builtin functions */
-    double exp(doublereal);
+    double exp(double);
 
     /* Local variables */
-    static doublereal a, b, c__, d__;
-    static integer i__, j;
-    static doublereal tmp1, tmp2;
+    static double a, b, c__, d__;
+    static int i__, j;
+    static double tmp1, tmp2;
 
     /* Parameter adjustments */
     y_dim1 = *m;
@@ -439,21 +439,21 @@ L9999:
 /* ************************************************** */
 /* GENERALIZED BELL MEMBER FUNCTION */
 /* ************************************************** */
-/* Subroutine */ int gbellmf_(doublereal *x, integer *m, integer *n, 
-	doublereal *par, doublereal *y, integer *ierr)
+/* Subroutine */ int gbellmf_(double *x, int *m, int *n, 
+	double *par, double *y, int *ierr)
 {
     /* System generated locals */
-    integer x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
-    doublereal d__1;
+    int x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
+    double d__1;
 
     /* Builtin functions */
-    double pow_dd(doublereal *, doublereal *);
+    double pow_dd(double *, double *);
 
     /* Local variables */
-    static doublereal a, b, c__;
-    static integer i__, j;
-    static doublereal tmp1;
-    extern /* Subroutine */ int flterr_(integer *);
+    static double a, b, c__;
+    static int i__, j;
+    static double tmp1;
+    extern /* Subroutine */ int flterr_(int *);
 
     /* Parameter adjustments */
     y_dim1 = *m;
@@ -504,19 +504,19 @@ L9999:
 /* ************************************************** */
 /* PI-SHAPED MEMBER FUNCTION */
 /* ************************************************** */
-/* Subroutine */ int pimf_(doublereal *x, integer *m, integer *n, doublereal *
-	par, doublereal *y, integer *ierr)
+/* Subroutine */ int pimf_(double *x, int *m, int *n, double *
+	par, double *y, int *ierr)
 {
     /* System generated locals */
-    integer x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
+    int x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
 
     /* Local variables */
-    static doublereal a[2], b[2];
-    static integer i__, j;
-    extern /* Subroutine */ int smf_(doublereal *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *), zmf_(doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *);
-    static doublereal tmp1, tmp2;
+    static double a[2], b[2];
+    static int i__, j;
+    extern /* Subroutine */ int smf_(double *, int *, int *, 
+	    double *, double *, int *), zmf_(double *, 
+	    int *, int *, double *, double *, int *);
+    static double tmp1, tmp2;
 
     /* Parameter adjustments */
     y_dim1 = *m;
@@ -552,17 +552,17 @@ L9999:
 /* ************************************************** */
 /* S-SHAPED MEMBER FUNCTION */
 /* ************************************************** */
-/* Subroutine */ int smf_(doublereal *x, integer *m, integer *n, doublereal *
-	par, doublereal *y, integer *ierr)
+/* Subroutine */ int smf_(double *x, int *m, int *n, double *
+	par, double *y, int *ierr)
 {
     /* System generated locals */
-    integer x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
-    doublereal d__1;
+    int x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
+    double d__1;
 
     /* Local variables */
-    static doublereal a, b;
-    static integer i__, j;
-    static doublereal tmp1, tmp2;
+    static double a, b;
+    static int i__, j;
+    static double tmp1, tmp2;
 
     /* Parameter adjustments */
     y_dim1 = *m;
@@ -624,17 +624,17 @@ L9999:
 /* ************************************************** */
 /* Z-SHAPED MEMBER FUNCTION */
 /* ************************************************** */
-/* Subroutine */ int zmf_(doublereal *x, integer *m, integer *n, doublereal *
-	par, doublereal *y, integer *ierr)
+/* Subroutine */ int zmf_(double *x, int *m, int *n, double *
+	par, double *y, int *ierr)
 {
     /* System generated locals */
-    integer x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
-    doublereal d__1;
+    int x_dim1, x_offset, y_dim1, y_offset, i__1, i__2;
+    double d__1;
 
     /* Local variables */
-    static doublereal a, b;
-    static integer i__, j;
-    static doublereal tmp1, tmp2;
+    static double a, b;
+    static int i__, j;
+    static double tmp1, tmp2;
 
     /* Parameter adjustments */
     y_dim1 = *m;
@@ -696,14 +696,14 @@ L9999:
 /* ************************************************** */
 /* CONSTANT MEMBER FUNCTION */
 /* ************************************************** */
-/* Subroutine */ int constant_(doublereal *x, integer *m, integer *n, 
-	doublereal *par, doublereal *y, integer *ierr)
+/* Subroutine */ int constant_(double *x, int *m, int *n, 
+	double *par, double *y, int *ierr)
 {
     /* System generated locals */
-    integer x_dim1, x_offset;
+    int x_dim1, x_offset;
 
     /* Local variables */
-    extern /* Subroutine */ int uinival_(doublereal *, integer *, doublereal *
+    extern /* Subroutine */ int uinival_(double *, int *, double *
 	    );
 
 /* COMPUTE MEMBER FUNCTION */
@@ -724,17 +724,17 @@ L9999:
 /* ************************************************** */
 /* LINEAR MEMBER FUNCTION */
 /* ************************************************** */
-/* Subroutine */ int linear_(doublereal *x, integer *m, integer *n, 
-	doublereal *par, doublereal *y, integer *ierr)
+/* Subroutine */ int linear_(double *x, int *m, int *n, 
+	double *par, double *y, int *ierr)
 {
     /* System generated locals */
-    integer x_dim1, x_offset, i__1;
+    int x_dim1, x_offset, i__1;
 
     /* Local variables */
-    static integer j;
-    extern /* Subroutine */ int daxpy_(integer *, doublereal *, doublereal *, 
-	    integer *, doublereal *, integer *), uinival_(doublereal *, 
-	    integer *, doublereal *);
+    static int j;
+    extern /* Subroutine */ int daxpy_(int *, double *, double *, 
+	    int *, double *, int *), uinival_(double *, 
+	    int *, double *);
 
 /* COMPUTE MEMBER FUNCTION */
     /* Parameter adjustments */
@@ -761,36 +761,37 @@ L9999:
 /* ************************************************** */
 /* EVALUATE MEMBER FUNCTION */
 /* ************************************************** */
-/* Subroutine */ int mfeval_(char *mfname, doublereal *x, integer *m, integer 
-	*n, doublereal *par, integer *npar, doublereal *y, integer *ierr, 
+// F2C(mfeval)(fname, lx, &mx, &nx, lp, &np, ly, &ierr);
+/* Subroutine */ int mfeval_(char *mfname, double *x, int *m, int 
+	*n, double *par, int *npar, double *y, int *ierr, 
 	ftnlen mfname_len)
 {
     /* System generated locals */
-    integer x_dim1, x_offset, y_dim1, y_offset;
+    int x_dim1, x_offset, y_dim1, y_offset;
 
     /* Builtin functions */
-    integer s_cmp(char *, char *, ftnlen, ftnlen);
+    int s_cmp(char *, char *, ftnlen, ftnlen);
 
     /* Local variables */
-    extern /* Subroutine */ int gauss2mf_(doublereal *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *), constant_(doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *), 
-	    smf_(doublereal *, integer *, integer *, doublereal *, doublereal 
-	    *, integer *), zmf_(doublereal *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *), pimf_(doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *), 
-	    erro_(char *, ftnlen), sigmf_(doublereal *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *), trimf_(doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *), 
-	    dsigmf_(doublereal *, integer *, integer *, doublereal *, 
-	    doublereal *, integer *), linear_(doublereal *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *), psigmf_(
-	    doublereal *, integer *, integer *, doublereal *, doublereal *, 
-	    integer *), trapmf_(doublereal *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *), gbellmf_(doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *), 
-	    gaussmf_(doublereal *, integer *, integer *, doublereal *, 
-	    doublereal *, integer *);
+    extern /* Subroutine */ int gauss2mf_(double *, int *, int *, 
+	    double *, double *, int *), constant_(double *, 
+	    int *, int *, double *, double *, int *), 
+	    smf_(double *, int *, int *, double *, double 
+	    *, int *), zmf_(double *, int *, int *, 
+	    double *, double *, int *), pimf_(double *, 
+	    int *, int *, double *, double *, int *), 
+	    erro_(char *, ftnlen), sigmf_(double *, int *, int *, 
+	    double *, double *, int *), trimf_(double *, 
+	    int *, int *, double *, double *, int *), 
+	    dsigmf_(double *, int *, int *, double *, 
+	    double *, int *), linear_(double *, int *, 
+	    int *, double *, double *, int *), psigmf_(
+	    double *, int *, int *, double *, double *, 
+	    int *), trapmf_(double *, int *, int *, 
+	    double *, double *, int *), gbellmf_(double *, 
+	    int *, int *, double *, double *, int *), 
+	    gaussmf_(double *, int *, int *, double *, 
+	    double *, int *);
 
 /* TRIANGULAR MEMBER FUNCTION */
     /* Parameter adjustments */
@@ -801,7 +802,7 @@ L9999:
     x_offset = 1 + x_dim1;
     x -= x_offset;
     --par;
-
+	sciprint("%i\n", *npar);
     /* Function Body */
     if (s_cmp(mfname, "trimf", (ftnlen)5, (ftnlen)5) == 0) {
 	if (*npar != 3) {
@@ -918,32 +919,32 @@ L9999:
 /* ************************************************** */
 /* EVALUATE MEMBER FUNCTION USING ID */
 /* ************************************************** */
-/* Subroutine */ int mfeval2_(integer *mfid, doublereal *x, integer *m, 
-	integer *n, doublereal *par, doublereal *y, integer *ierr)
+/* Subroutine */ int mfeval2_(int *mfid, double *x, int *m, 
+	int *n, double *par, double *y, int *ierr)
 {
     /* System generated locals */
-    integer x_dim1, x_offset, y_dim1, y_offset;
+    int x_dim1, x_offset, y_dim1, y_offset;
 
     /* Local variables */
-    extern /* Subroutine */ int gauss2mf_(doublereal *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *), constant_(doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *), 
-	    smf_(doublereal *, integer *, integer *, doublereal *, doublereal 
-	    *, integer *), zmf_(doublereal *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *), pimf_(doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *), 
-	    erro_(char *, ftnlen), sigmf_(doublereal *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *), trimf_(doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *), 
-	    dsigmf_(doublereal *, integer *, integer *, doublereal *, 
-	    doublereal *, integer *), linear_(doublereal *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *), psigmf_(
-	    doublereal *, integer *, integer *, doublereal *, doublereal *, 
-	    integer *), trapmf_(doublereal *, integer *, integer *, 
-	    doublereal *, doublereal *, integer *), gbellmf_(doublereal *, 
-	    integer *, integer *, doublereal *, doublereal *, integer *), 
-	    gaussmf_(doublereal *, integer *, integer *, doublereal *, 
-	    doublereal *, integer *);
+    extern /* Subroutine */ int gauss2mf_(double *, int *, int *, 
+	    double *, double *, int *), constant_(double *, 
+	    int *, int *, double *, double *, int *), 
+	    smf_(double *, int *, int *, double *, double 
+	    *, int *), zmf_(double *, int *, int *, 
+	    double *, double *, int *), pimf_(double *, 
+	    int *, int *, double *, double *, int *), 
+	    erro_(char *, ftnlen), sigmf_(double *, int *, int *, 
+	    double *, double *, int *), trimf_(double *, 
+	    int *, int *, double *, double *, int *), 
+	    dsigmf_(double *, int *, int *, double *, 
+	    double *, int *), linear_(double *, int *, 
+	    int *, double *, double *, int *), psigmf_(
+	    double *, int *, int *, double *, double *, 
+	    int *), trapmf_(double *, int *, int *, 
+	    double *, double *, int *), gbellmf_(double *, 
+	    int *, int *, double *, double *, int *), 
+	    gaussmf_(double *, int *, int *, double *, 
+	    double *, int *);
 
 /* TRIANGULAR MEMBER FUNCTION */
     /* Parameter adjustments */
@@ -1006,15 +1007,15 @@ L9999:
 /* ************************************************** */
 /* USED WITH SCICOS */
 /* ************************************************** */
-/* Subroutine */ int smfeval_(integer *flag__, integer *nevprt, doublereal *t,
-	 doublereal *xd, doublereal *x, integer *nx, doublereal *z__, integer 
-	*nz, doublereal *tvec, integer *ntvec, doublereal *rpar, integer *
-	nrpar, integer *ipar, integer *nipar, doublereal *u, integer *nu, 
-	doublereal *y, integer *ny)
+/* Subroutine */ int smfeval_(int *flag__, int *nevprt, double *t,
+	 double *xd, double *x, int *nx, double *z__, int 
+	*nz, double *tvec, int *ntvec, double *rpar, int *
+	nrpar, int *ipar, int *nipar, double *u, int *nu, 
+	double *y, int *ny)
 {
-    static integer ierr;
-    extern /* Subroutine */ int mfeval2_(integer *, doublereal *, integer *, 
-	    integer *, doublereal *, doublereal *, integer *);
+    static int ierr;
+    extern /* Subroutine */ int mfeval2_(int *, double *, int *, 
+	    int *, double *, double *, int *);
 
     /* Parameter adjustments */
     --y;
@@ -1036,7 +1037,7 @@ L9999:
 /* ************************************************** */
 /* error */
 /* ************************************************** */
-/* Subroutine */ int flterr_(integer *nerr)
+/* Subroutine */ int flterr_(int *nerr)
 {
     extern /* Subroutine */ int erro_(char *, ftnlen);
 
@@ -1103,7 +1104,7 @@ L9999:
 	erro_("The third par must have the same size as outputs.", (ftnlen)49)
 		;
     } else if (*nerr == 211) {
-	erro_("The third parameter must be a vector with integers.", (ftnlen)
+	erro_("The third parameter must be a vector with ints.", (ftnlen)
 		51);
     } else if (*nerr == 999) {
 	erro_("No more memory!", (ftnlen)15);
@@ -1113,7 +1114,7 @@ L9999:
 	erro_("Invalid par, trapmf need [a,b,c,d] with a<b<=c<d.", (ftnlen)49)
 		;
     } else if (*nerr == 1020) {
-	erro_("Invalid para, gaussmf need [a,b] with b<>0.", (ftnlen)43);
+	erro_("Invalid para, gaussmf need [sig,c] with a~=0.", (ftnlen)43);
     } else if (*nerr == 1030) {
 	erro_("Invalid par, gaussmf need [a,b,c,d] with b<>0, d<>0.", (ftnlen)
 		52);

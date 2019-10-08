@@ -16,7 +16,7 @@
 
       </td>
       <td width="40%" class="center">
-      	<span class="top"><a href="section_5a31c1a462cf83aab9ce5df5afe906bb.html">sciFLT</a></span>
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
 
       </td>
       <td width="30%" class="next">
@@ -29,7 +29,7 @@
 
 
 
-    <span class="path" dir="ltr"><a href="index.html">sciFLT</a> &gt;&gt; <a href="section_5a31c1a462cf83aab9ce5df5afe906bb.html">sciFLT</a> &gt; optfls01</span>
+    <span class="path" dir="ltr"><a href="index.html">sciFLT</a> &gt;&gt; <a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a> &gt; optfls01</span>
 
     <br /><br />
     <div class="refnamediv"><h1 class="refname">optfls01</h1>
@@ -60,10 +60,10 @@
    <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">x</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabspecial">:</span><span class="scilabnumber">0.1</span><span class="scilabspecial">:</span><span class="scilabnumber">10</span><span class="scilabopenclose">)</span><span class="scilaboperator">&#0039;</span><span class="scilabdefault">;</span>
 <span class="scilabid">y</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://sin">sin</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilaboperator">*</span><span class="scilabid">x</span><span class="scilabopenclose">)</span><span class="scilaboperator">./</span><a class="scilabcommand" href="scilab://exp">exp</a><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilaboperator">/</span><span class="scilabnumber">5</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabopenclose">[</span><span class="scilabid">THETA</span><span class="scilabdefault">,</span><span class="scilabid">PSI</span><span class="scilabdefault">,</span><span class="scilabid">Ck</span><span class="scilabdefault">,</span><span class="scilabid">fls</span><span class="scilabopenclose">]</span><span class="scilaboperator">=</span><span class="scilabid">optfls01</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabid">y</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span><span class="scilabconstants">%eps</span><span class="scilabdefault">,</span><span class="scilabnumber">20</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
-<a class="scilabmacro" href="scilab://scf">scf</a><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span><a class="scilabmacro" href="scilab://clf">clf</a><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
-<a class="scilabmacro" href="scilab://plot">plot</a><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabid">y</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
-<a class="scilabmacro" href="scilab://plot">plot</a><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabid">evalfls</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabid">fls</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">g</span><span class="scilabstring">&#0039;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
-<a class="scilabmacro" href="scilab://legend">legend</a><span class="scilabopenclose">(</span><span class="scilabstring">&#0039;</span><span class="scilabstring">Training Data</span><span class="scilabstring">&#0039;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">optfls01 Output</span><span class="scilabstring">&#0039;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">scf</span><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span><span class="scilabid">clf</span><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">plot</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabid">y</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">plot</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabid">evalfls</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabid">fls</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">g</span><span class="scilabstring">&#0039;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">legend</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0039;</span><span class="scilabstring">Training Data</span><span class="scilabstring">&#0039;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">optfls01 Output</span><span class="scilabstring">&#0039;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
 
 <div class="refsection"><h3 class="title">See also</h3>
    <ul class="itemizedlist"><li class="member"><a href="fls_structure.html" class="link">fls_structure</a></li></ul></div>
@@ -82,7 +82,7 @@
 
       </td>
       <td width="40%" class="center">
-      	<span class="top"><a href="section_5a31c1a462cf83aab9ce5df5afe906bb.html">sciFLT</a></span>
+      	<span class="top"><a href="section_161df957ee5084fa35dfab9386dd87ac.html">sciFLT</a></span>
 
       </td>
       <td width="30%" class="next">
