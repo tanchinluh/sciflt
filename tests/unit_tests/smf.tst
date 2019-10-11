@@ -26,6 +26,6 @@ for a=linspace(-1,1,20),
 		computed = Y1;
 		expected = Y2;
 
-		assert_checkalmostequal ( computed , expected , %eps);				
+		assert_checkalmostequal ( computed , expected ,[], %eps);				
 	end
 end

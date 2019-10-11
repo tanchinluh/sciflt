@@ -10,8 +10,8 @@ y=rand(1000,1);
 y_sum=sum(y);
 Y1=sum(y.*x)/y_sum;
 Y2=defuzzm(x,y,"centroide");
-computed = Y1
- expected = Y2
+computed = Y1;
+expected = Y2;
 
 assert_checkalmostequal ( computed , expected , %eps);
 	
@@ -31,8 +31,8 @@ end
 Y1=x(k);
 Y2=defuzzm(x,y,"bisector");
 
-computed = Y1
-expected = Y2
+computed = Y1;
+expected = Y2;
 
 assert_checkalmostequal ( computed , expected , %eps);
 
@@ -46,8 +46,8 @@ end
 Y1=mean(x(find(y==max(y))));
 Y2=defuzzm(x,y,"mom");
 
-computed = Y1
-expected = Y2
+computed = Y1;
+expected = Y2;
 
 assert_checkalmostequal ( computed , expected , %eps);
 	
@@ -62,8 +62,8 @@ tmp=find(y==max(y));
 Y1=max(x(tmp));
 Y2=defuzzm(x,y,"lom");
 
-computed = Y1
-expected = Y2
+computed = Y1;
+expected = Y2;
 
 assert_checkalmostequal ( computed , expected , %eps);
 	
@@ -78,7 +78,7 @@ tmp=find(y==max(y));
 Y1=min(x(tmp));
 Y2=defuzzm(x,y,"som");
 
-computed = Y1
-expected = Y2
+computed = Y1;
+expected = Y2;
 
 assert_checkalmostequal ( computed , expected , %eps);

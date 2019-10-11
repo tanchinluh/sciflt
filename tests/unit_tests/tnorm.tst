@@ -8,7 +8,7 @@ Y2=min(x,"c");
 computed = Y1;
 expected = Y2;
 
-assert_checkalmostequal ( computed , expected , %eps);
+assert_checkalmostequal ( computed , expected ,[], %eps);
 
 
 // ALGEBRAIC PRODUCT CLASS
@@ -27,7 +27,7 @@ end
 computed = Y1;
 expected = Y2;
 
-assert_checkalmostequal ( computed , expected , %eps);
+assert_checkalmostequal ( computed , expected ,[], %eps);
 
 
 // DRASTIC PRODUCT CLASS
@@ -45,7 +45,7 @@ end
 computed = Y1;
 expected = Y2;
 
-assert_checkalmostequal ( computed , expected , %eps);
+assert_checkalmostequal ( computed , expected ,[], %eps);
 
 // YAGER CLASS
 x=rand(100,2);
@@ -64,7 +64,7 @@ for p=[1 5 10 %inf],
 	computed = Y1;
 	expected = Y2;
 
-	assert_checkalmostequal ( computed , expected , %eps*200);
+	assert_checkalmostequal ( computed , expected , [],%eps*200);
 end
 
 // DUBOIS SUM CLASS
@@ -79,5 +79,5 @@ for p=linspace(0,1,10),
 	computed = Y1;
 	expected = Y2;
 
-	assert_checkalmostequal ( computed , expected , %eps*200);
+	assert_checkalmostequal ( computed , expected , [],%eps*200);
 end

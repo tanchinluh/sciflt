@@ -20,6 +20,7 @@
 *			 Fix bugs on tmp2, where the malloc missing noutput casing the crash
 *			 Completing the final part of gateway which has not been converted.
 *			 flsencode part left unmodified, consider to change to Scilab 6 format.  
+*			 Replace all called f2c codes integer to int, doublereal to double and solve crashing in MacOS.
 * ------------------------------------------------------------------------
 */
 

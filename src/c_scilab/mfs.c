@@ -802,7 +802,7 @@ L9999:
     x_offset = 1 + x_dim1;
     x -= x_offset;
     --par;
-	sciprint("%i\n", *npar);
+	//sciprint("%i\n", *npar);
     /* Function Body */
     if (s_cmp(mfname, "trimf", (ftnlen)5, (ftnlen)5) == 0) {
 	if (*npar != 3) {

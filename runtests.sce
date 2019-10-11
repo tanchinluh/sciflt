@@ -16,15 +16,15 @@ function test_runfromdemo ( demoscript , modulename )
   //
   // Author
   //   2010 - DIGITEO - Michael Baudin
-
+warning('off')
   demopath = get_absolute_file_path(demoscript);
   cwd = pwd();
   mprintf("Running unit tests for module : %s\n",modulename );
   mprintf("Current directory : %s\n",pwd());
   test_files = dir(demopath+"/tests/unit_tests/*.tst")
-  max(size(test_files.name))
+  max(size(test_files.name));
   for i=1:max(size(test_files.name))
-    mprintf("Running %d. of %d tests: %s\n",i,max(size(test_files.name)),basename(test_files.name(i)))
+    mprintf("Running %d. of %d tests: %s\n",i,max(size(test_files.name)),basename(test_files.name(i)));
 	exec(test_files.name(i));
   end;
   cd(cwd);

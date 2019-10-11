@@ -9,7 +9,7 @@ Y2=max(x,"c");
 computed = Y1;
 expected = Y2;
 
-assert_checkalmostequal ( computed , expected , %eps);
+assert_checkalmostequal ( computed , expected ,[], %eps);
 // ALGEBRAIC SUM CLASS
 
 x=rand(100,100);
@@ -21,7 +21,7 @@ end
 computed = Y1;
 expected = Y2;
 
-assert_checkalmostequal ( computed , expected , %eps);
+assert_checkalmostequal ( computed , expected ,[], %eps);
 
 // EINSTEIN SUM CLASS
 x=rand(100,100);
@@ -33,7 +33,7 @@ end
 computed = Y1;
 expected = Y2;
 
-assert_checkalmostequal ( computed , expected , %eps);
+assert_checkalmostequal ( computed , expected ,[], %eps);
 
 // DRASTIC SUM CLASS
 x=[rand(100,100); zeros(100,50) rand(100,25) zeros(100,25)];
@@ -50,7 +50,7 @@ end
 computed = Y1;
 expected = Y2;
 
-assert_checkalmostequal ( computed , expected , %eps);
+assert_checkalmostequal ( computed , expected ,[], %eps);
 
 // YAGER SUM CLASS
 
@@ -66,7 +66,7 @@ for p=[1 5 10 20],
 	computed = Y1;
 	expected = Y2;
 
-	assert_checkalmostequal ( computed , expected , %eps*5);	
+	assert_checkalmostequal ( computed , expected ,[], %eps*5);	
 end
 
 // DUBOIS SUM CLASS
@@ -81,5 +81,5 @@ for p=linspace(0.1,0.9,5),
 	computed = Y1;
 	expected = Y2;
 
-	assert_checkalmostequal ( computed , expected , %eps);
+	assert_checkalmostequal ( computed , expected ,[], %eps);
 end
